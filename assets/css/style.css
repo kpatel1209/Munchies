@@ -38,12 +38,13 @@ a.brand-logo {
     margin-top:0;
 }
 
-.ingredient-submit {
+.ing-submit-btn {
     letter-spacing: 0px;
     background: lightgrey;
     border-radius: 25px
 }
 
 .recent-ing-box {
-    padding-top: 10px;
+    padding: 0;
+    margin: 0;
 }
