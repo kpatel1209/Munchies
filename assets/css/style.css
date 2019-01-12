@@ -1,0 +1,55 @@
+body {
+    background-image: url(../images/main-food-background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+}
+
+.main-content {
+    padding-top: 20px;
+    margin-top: 5px;
+}
+
+a.brand-logo {
+    font-size: 43px;
+    padding-top: 5px;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 1280px;
+    width: 100%;
+}
+
+.card {
+    border: 5px teal solid;
+    min-height: 600px;
+    border-radius: 25px
+}
+
+.col .row {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+#user_list {
+    margin-top:0;
+}
+
+::placeholder {
+    color: grey lighten-5;
+    opacity: .35;
+}
+
+.ing-submit-btn {
+    letter-spacing: 0px;
+    background: lightgrey;
+    border-radius: 25px
+}
+
+.recent-ing-box {
+    padding: 0;
+    margin: 0;
+}
