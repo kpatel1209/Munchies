@@ -38,6 +38,11 @@ a.brand-logo {
     margin-top:0;
 }
 
+::placeholder {
+    color: grey lighten-5;
+    opacity: .35;
+}
+
 .ing-submit-btn {
     letter-spacing: 0px;
     background: lightgrey;
