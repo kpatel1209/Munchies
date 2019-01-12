@@ -5,8 +5,6 @@ body {
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
-    /* min-height: 100%;
-    min-width: 1024px; */
 }
 
 .main-content {
@@ -38,4 +36,14 @@ a.brand-logo {
 
 #user_list {
     margin-top:0;
+}
+
+.ingredient-submit {
+    letter-spacing: 0px;
+    background: lightgrey;
+    border-radius: 25px
+}
+
+.recent-ing-box {
+    padding-top: 10px;
 }

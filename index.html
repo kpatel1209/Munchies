@@ -62,28 +62,35 @@
         <div class="container">
             <div class="row">
                 <div class="col s12 m3">
-                    <div class="card" id="user_ingredients" style="background-color:rgba(0, 0, 0, 0.75);">
-                        <h5 class="center enter-your-ingredients" style="color: white; font-family: 'Roboto', sans-serif;"><strong>Enter Your Ingredients:</strong></h5>
-                        <div class="row ingredient_list">
-                            <div class="input-field col s12" id="user_list">
-                                <input type="text" class="autocomplete" placeholder="Apples" style="height: 2rem; font-size: 13px; color: white;">
-                                <input type="text" class="autocomplete" placeholder="Chicken" style="height: 2rem; font-size: 13px; color: white;">
-                                <input type="text" class="autocomplete" placeholder="Onions" style="height: 2rem; font-size: 13px; color: white;">
-                                <input type="text" class="autocomplete" placeholder="Spaghetti" style="height: 2rem; font-size: 13px; color: white;">
-                                <input type="text" class="autocomplete" placeholder="Bread" style="height: 2rem; font-size: 13px; color: white;">
+                    <div>
+                        <div class="card" id="user_ingredients" style="background-color:rgba(0, 0, 0, 0.75);">
+                            <div class="new-ing-box">
+                                <h5 class="center enter-your-ingredients" style="color: white; font-family: 'Roboto', sans-serif;"><strong>Enter Your Ingredients:</strong></h5>
+                                <div class="row ingredient_list">
+                                    <div class="input-field col s12" id="user_list">
+                                        <input type="text" class="autocomplete" placeholder="Apples" style="height: 2rem; font-size: 13px; color: white;">
+                                        <input type="text" class="autocomplete" placeholder="Chicken" style="height: 2rem; font-size: 13px; color: white;">
+                                        <input type="text" class="autocomplete" placeholder="Onions" style="height: 2rem; font-size: 13px; color: white;">
+                                        <input type="text" class="autocomplete" placeholder="Spaghetti" style="height: 2rem; font-size: 13px; color: white;">
+                                        <input type="text" class="autocomplete" placeholder="Bread" style="height: 2rem; font-size: 13px; color: white;">
+                                        <a class="waves-effect waves-light btn-small ingredient-submit" style="font-size: 13px; color: black; font-weight: bold;">Submit</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="recent-ing-box">
+                                <h5 class="center recent-ingredients" style="color: white; font-family: 'Roboto', sans-serif;"><strong>Recent Ingredients:</strong></h5>
+                                <div class="row ingredient_list">
+                                    <div class="input-field col s12" id="user_list">
+                                        <input type="text" class="autocomplete" placeholder="Oranges" style="height: 2rem; font-size: 13px; color: white;">
+                                        <input type="text" class="autocomplete" placeholder="Carrots" style="height: 2rem; font-size: 13px; color: white;">
+                                        <input type="text" class="autocomplete" placeholder="Beef" style="height: 2rem; font-size: 13px; color: white;">
+                                        <input type="text" class="autocomplete" placeholder="Cheese" style="height: 2rem; font-size: 13px; color: white;">
+                                        <input type="text" class="autocomplete" placeholder="Peppers" style="height: 2rem; font-size: 13px; color: white;">
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <h5 class="center recent-ingredients" style="color: white; font-family: 'Roboto', sans-serif;"><strong>Recent Ingredients:</strong></h5>
-                        <div class="row ingredient_list">
-                            <div class="input-field col s12" id="user_list">
-                                <input type="text" class="autocomplete" placeholder="Oranges" style="height: 2rem; font-size: 13px; color: white;">
-                                <input type="text" class="autocomplete" placeholder="Carrots" style="height: 2rem; font-size: 13px; color: white;">
-                                <input type="text" class="autocomplete" placeholder="Beef" style="height: 2rem; font-size: 13px; color: white;">
-                                <input type="text" class="autocomplete" placeholder="Cheese" style="height: 2rem; font-size: 13px; color: white;">
-                                <input type="text" class="autocomplete" placeholder="Peppers" style="height: 2rem; font-size: 13px; color: white;">
-                            </div>
-                        </div>
-                    </div>
+                    </div>    
                 </div>
                 <div class="col s12 m6">
                     <div class="card" id="recipe_results" style="background-color:rgba(0, 0, 0, 0.75);">
