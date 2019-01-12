@@ -5,18 +5,18 @@ body {
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
-    min-height: 100%;
-    min-width: 1024px;
+    /* min-height: 100%;
+    min-width: 1024px; */
 }
 
 .main-content {
-    margin-top: 15px;
+    padding-top: 20px;
+    margin-top: 5px;
 }
 
 a.brand-logo {
-    font-size: 40px;
+    font-size: 43px;
     padding-top: 5px;
-    
 }
 
 .container {
@@ -28,9 +28,14 @@ a.brand-logo {
 .card {
     border: 5px teal solid;
     min-height: 600px;
+    border-radius: 25px
 }
 
 .col .row {
     margin-left: 0;
     margin-right: 0;
+}
+
+#user_list {
+    margin-top:0;
 }

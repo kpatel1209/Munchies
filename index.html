@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <!--Import Google Icon Font-->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons|Coiny" rel="stylesheet">    
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons|Coiny|Roboto" rel="stylesheet">    
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <title>Munchies</title>
@@ -25,13 +25,16 @@
                     </a>
                     <ul class="right hide-on-med-and-down">
                         <li>
-                            <a href="#home">Home</a>
+                            <a href="#home" style="font-family: 'Roboto', sans-serif; font-size: 17px;">Home</a>
                         </li>
                         <li>
-                            <a href="#grocery-list">Your Grocery List</a>
+                            <a href="#home" style="font-family: 'Roboto', sans-serif; font-size: 17px;">Favorites</a>
                         </li>
                         <li>
-                            <a href="#login">Login</a>
+                            <a href="#grocery-list" style="font-family: 'Roboto', sans-serif; font-size: 17px;">Grocery List</a>
+                        </li>
+                        <li>
+                            <a href="#login" style="font-family: 'Roboto', sans-serif; font-size: 17px;">Login</a>
                         </li>
                     </ul>
                 </div>
@@ -41,13 +44,16 @@
     <!-- Mobile Navbar -->
     <ul class="sidenav" id="mobile-nav">
         <li>
-            <a href="#home">Home</a>
+            <a href="#home" style="font-family: 'Roboto', sans-serif; font-size: 17px;">Home</a>
         </li>
         <li>
-            <a href="#grocery-list">Your Grocery List</a>
+            <a href="#favorites" style="font-family: 'Roboto', sans-serif; font-size: 17px;">Favorites</a>
         </li>
         <li>
-            <a href="#login">Login</a>
+            <a href="#grocery-list" style="font-family: 'Roboto', sans-serif; font-size: 17px;">Grocery List</a>
+        </li>
+        <li>
+            <a href="#login" style="font-family: 'Roboto', sans-serif; font-size: 17px;">Login</a>
         </li>
     </ul>
 
@@ -57,28 +63,37 @@
             <div class="row">
                 <div class="col s12 m3">
                     <div class="card" id="user_ingredients" style="background-color:rgba(0, 0, 0, 0.75);">
-                        <h5 class="center" style="color: white;"><strong>Enter Your Ingredients</strong></h5>
+                        <h5 class="center enter-your-ingredients" style="color: white; font-family: 'Roboto', sans-serif;"><strong>Enter Your Ingredients:</strong></h5>
                         <div class="row ingredient_list">
-                            <div class="input-field col s12">
-                                <input type="text" class="autocomplete" placeholder="Apples" style="height: 2rem;">
-                                <input type="text" class="autocomplete" placeholder="Chicken" style="height: 2rem;">
-                                <input type="text" class="autocomplete" placeholder="Onions" style="height: 2rem;">
-                                <input type="text" class="autocomplete" placeholder="Spaghetti" style="height: 2rem;">
-                                <input type="text" class="autocomplete" placeholder="Bread" style="height: 2rem;">
+                            <div class="input-field col s12" id="user_list">
+                                <input type="text" class="autocomplete" placeholder="Apples" style="height: 2rem; font-size: 13px; color: white;">
+                                <input type="text" class="autocomplete" placeholder="Chicken" style="height: 2rem; font-size: 13px; color: white;">
+                                <input type="text" class="autocomplete" placeholder="Onions" style="height: 2rem; font-size: 13px; color: white;">
+                                <input type="text" class="autocomplete" placeholder="Spaghetti" style="height: 2rem; font-size: 13px; color: white;">
+                                <input type="text" class="autocomplete" placeholder="Bread" style="height: 2rem; font-size: 13px; color: white;">
                             </div>
                         </div>
-
+                        <h5 class="center recent-ingredients" style="color: white; font-family: 'Roboto', sans-serif;"><strong>Recent Ingredients:</strong></h5>
+                        <div class="row ingredient_list">
+                            <div class="input-field col s12" id="user_list">
+                                <input type="text" class="autocomplete" placeholder="Oranges" style="height: 2rem; font-size: 13px; color: white;">
+                                <input type="text" class="autocomplete" placeholder="Carrots" style="height: 2rem; font-size: 13px; color: white;">
+                                <input type="text" class="autocomplete" placeholder="Beef" style="height: 2rem; font-size: 13px; color: white;">
+                                <input type="text" class="autocomplete" placeholder="Cheese" style="height: 2rem; font-size: 13px; color: white;">
+                                <input type="text" class="autocomplete" placeholder="Peppers" style="height: 2rem; font-size: 13px; color: white;">
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="col s12 m6">
                     <div class="card" id="recipe_results" style="background-color:rgba(0, 0, 0, 0.75);">
-                        <h5 class="center" style="color: white;" ><strong>List of Recipes</strong></h5>
+                        <h5 class="center" style="color: white; font-family: 'Roboto', sans-serif;" ><strong>List of Recipes:</strong></h5>
                         
                     </div>
                 </div>
                 <div class="col s12 m3">
                     <div class="card" id="recipe_results" style="background-color:rgba(0, 0, 0, 0.75);">
-                        <h5 class="center" style="color: white;" ><strong>Information</strong></h5>
+                        <h5 class="center" style="color: white; font-family: 'Roboto', sans-serif;" ><strong>Information:</strong></h5>
                         
                     </div>
                 </div>
