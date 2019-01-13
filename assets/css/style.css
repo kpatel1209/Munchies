@@ -87,7 +87,7 @@ a.brand-logo {
     padding: 0;
     position: absolute;
     width: 90%;
-    height: 21%;
+    height: 23%;
     border-radius: 25px;
 }
 
@@ -99,11 +99,16 @@ a.brand-logo {
 .recipe-text{
     float: left;
     font-weight: bold;
-    margin: 0 0 0 30px;
+    margin: 10px 0 0 30px;
 }
 
 #recipe-name {
     text-decoration: underline;
+}
+
+#fav-icon {
+    float: right;
+    margin: 0 10px 0 0;
 }
 
 #recipe-image {
@@ -111,7 +116,7 @@ a.brand-logo {
     width: 75px;
     height: auto;
     border: 1px black solid;
-    margin: 3px 30px 0 0;
+    margin: 10px 30px 0 0;
 }
 /* SECOND COLUMN - end */
 
