@@ -2,30 +2,29 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <!--Import Google Icon Font-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons|Coiny|Roboto" rel="stylesheet">    
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <title>Munchies</title>
+    <title>Munchies - "Click click recipe"</title>
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
-
 </head>
 <body>
 
     <!-- Navbar -->
     <div class="navbar-fixed">
-        <nav class="teal">
+        <nav class="teal" id="navbar">
             <div class="container">
                 <div class="nav-wrapper">
                     <a href="#" class="brand-logo center" style="font-family: 'Coiny', cursive;">MUNCHIES</a>
+                    <h6 class="brand-logo center" id="quote">"Click click recipe"</h6>
                     <a href="#" data-target="mobile-nav" class="sidenav-trigger">
                         <i class="material-icons">menu</i>
                     </a>
-                    <ul class="right hide-on-med-and-down">
+                    <ul class="right hide-on-med-and-down" id="navbar-links">
                         <li>
                             <a href="#home" style="font-family: 'Roboto', sans-serif; font-size: 17px;">Home</a>
                         </li>
@@ -64,92 +63,82 @@
     <section class="main-content">
         <div class="container">
             <div class="row">
-                <div class="col s12 m3">
-                    <!-- First Column: User Input + Recently Logged Ingredients -->
-                    <div class="card" id="first-column" style="background-color:rgba(0, 0, 0, 0.75);">
+                <div class="col s12 m3" id="first-box">
+                    <div class="card three-boxes" style="background-color:rgba(0, 0, 0, 0.75);">
                         <div class="new-ing-box">
-                            <h5 class="center" id="user-ingredients" style="color: white; font-family: 'Roboto', sans-serif;"><strong>Enter Your Ingredients:</strong></h5>
+                            <h5 class="center" id="enter-your-ingredients-header" style="color: white; font-family: 'Roboto', sans-serif;"><strong>Enter Your Ingredients:</strong></h5>
                             <div class="row">
-                                <div class="input-field col s12" id="user-ing-input">
-                                    <!-- New Ingredient fields have an autocomplete function; need to add an array of popular ingredients to js and  link to input fields  -->
-                                    <input type="text" class="autocomplete" id="new-ing" placeholder="Apples" style="height: 2rem; font-size: 13px; color: white;">
-                                    <input type="text" class="autocomplete" id="new-ing" placeholder="Chicken" style="height: 2rem; font-size: 13px; color: white;">
-                                    <input type="text" class="autocomplete" id="new-ing" placeholder="Onions" style="height: 2rem; font-size: 13px; color: white;">
-                                    <input type="text" class="autocomplete" id="new-ing" placeholder="Spaghetti" style="height: 2rem; font-size: 13px; color: white;">
-                                    <input type="text" class="autocomplete" id="new-ing" placeholder="Bread" style="height: 2rem; font-size: 13px; color: white;">
+                                <div class="input-field col s12" id="user_ing-input">
+                                    <!-- New Ingredient fields have an autocomplete function; need to add an array of popular ingredients to js file and link to input fields  -->
+                                    <input type="text" class="autocomplete" id="new-ingredient" placeholder="(Entry Required)" style="height: 2rem; font-size: 13px; color: white;">
+                                </div>    
+                                <div class="add-remove-submit">
+                                    <a class="waves-effect waves-light btn-small" id="add-ing-btn" style="font-size: 13px; color: black; font-weight: bold;">Add</a>
+                                    <a class="waves-effect waves-light btn-small" id="remove-ing-btn" style="font-size: 13px; color: black; font-weight: bold;">Remove</a>
                                     <a class="waves-effect waves-light btn-small" id="submit-ing-btn" style="font-size: 13px; color: black; font-weight: bold;">Submit</a>
                                 </div>
                             </div>
                         </div>
                         <div class="recent-ing-box">
-                            <h5 class="center" id="recent-ingredients" style="color: white; font-family: 'Roboto', sans-serif;"><strong>Recent Ingredients:</strong></h5>
-                            <div class="row" id="recent-ingredients">
-                                <div class="input-field col s12" id="recent_ing-list">
-                                    <input type="text" id="old-ingredient" placeholder="Oranges" style="height: 2rem; font-size: 13px; color: white;">
-                                    <input type="text" id="old-ingredient" placeholder="Carrots" style="height: 2rem; font-size: 13px; color: white;">
-                                    <input type="text" id="old-ingredient" placeholder="Beef" style="height: 2rem; font-size: 13px; color: white;">
-                                    <input type="text" id="old-ingredient" placeholder="Cheese" style="height: 2rem; font-size: 13px; color: white;">
-                                    <input type="text" id="old-ingredient" placeholder="Peppers" style="height: 2rem; font-size: 13px; color: white;">
+                            <h5 class="center" id="recent-ingredients-header" style="color: white; font-family: 'Roboto', sans-serif;"><strong>Recent Ingredients:</strong></h5>
+                            <div class="row" id="recent-ing-box">
+                                <div class="input-field col s12" id="recent-ing-list">
+                                    <input type="text" class="old-ingredient" placeholder="Chicken" style="height: 2rem; font-size: 13px; color: white;">
+                                    <input type="text" class="old-ingredient" placeholder="Peppers" style="height: 2rem; font-size: 13px; color: white;">
+                                    <input type="text" class="old-ingredient" placeholder="Beans" style="height: 2rem; font-size: 13px; color: white;">
+                                    <input type="text" class="old-ingredient" placeholder="Potatoes" style="height: 2rem; font-size: 13px; color: white;">
                                 </div>
                             </div>
                         </div>
-                    </div>    
+                    </div>
                 </div>
-                <div class="col s12 m6">
-                    <div class="card" id="recipe_results" style="background-color:rgba(0, 0, 0, 0.75);">
+                <div class="col s12 m6" id="second-box">
+                    <div class="card three-boxes" style="background-color:rgba(0, 0, 0, 0.75);">
                         <h5 class="center" style="color: white; font-family: 'Roboto', sans-serif;" ><strong>List of Recipes:</strong></h5>
                         <div class="row">
-                            <div class="col s12 offset-s3">
-                                <div class="recipe-box">
-                                    <div class="recipe-content">
-                                        <div class="recipe-name">
-                                            <h6 class="label">Recipe Name</h6>
+                            <div class="col s12">
+                                <div class="card" id="recipe-boxes">
+                                    <div class="card-content" id="recipe-content">
+                                        <div class="recipe-title">
+                                            <h6 class="lable center" id="recipe-name"><strong>Recipe Name</strong>
+                                                <i class="material-icons" id="fav-icon">favorite_border</i>
+                                            </h6>
+                                        </div>                                        
+                                        <div class="recipe-text">
+                                            <p class="prep">Prep Time: </p>
+                                            <p class="diet">Diet: </p>
+                                            <p class="yield">Servings: </p>
                                         </div>
-                                            <div class="recipe-image">
-                                                <img src="./assets/images/recipe-image-example.jpg" class="recipe-image">
-                                            </div>
-                                            <div class="recipe-text">
-                                                <p class="prep">Prep Time: </p>
-                                                <p class="diet">Diet: </p>
-                                                <p class="yield">Servings: </p>
-                                            </div>
+                                        <div>    
+                                            <img src="assets/images/recipe-image-example.jpg" id="recipe-image">
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>                
+                        </div>
                     </div>
                 </div>
-                <div class="col s12 m3">
-                    <div class="card" id="recipe_results" style="background-color:rgba(0, 0, 0, 0.75);">
+                <div class="col s12 m3" id="third-box">
+                    <div class="card three-boxes" style="background-color:rgba(0, 0, 0, 0.75);">
                         <h5 class="center" style="color: white; font-family: 'Roboto', sans-serif;" ><strong>Information:</strong></h5>
-                        
+                        <div class="row">
+                            <div class="col s12">
+                                <h6 class="white-text" id="recipe-ingredients" style="color: white; font-family: 'Roboto', sans-serif;"><strong></strong>Recipe Ingredients:</strong></h6>
+                                <p class="ingredientLines" style="color: white; font-family: 'Roboto', sans-serif;">1/2 lb chicken</p>
+                                <p class="recipeURL" style="color: white; font-family: 'Roboto', sans-serif;"></p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col s12">
+                                <h6 class="white-text" id="nutrition-facts" style="color: white; font-family: 'Roboto', sans-serif;"><strong></strong>Nutrition Facts:</strong></h6>
+                                <p class="nutrition" style="color: white; font-family: 'Roboto', sans-serif;">Calories: </p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-
         </div>
     </section>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     <!-- Compiled and minified JavaScript -->
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
