@@ -35,26 +35,26 @@ a.brand-logo {
     width: 100%;
 }
 
-/* THREE COLUMNS - start */
+/* THREE BOX - start */
 .main-content {
     padding-top: 20px;
     margin-top: 10px;
 }
 
-.three-columns {
+.three-boxes {
     border: 5px teal solid;
     min-height: 600px;
     border-radius: 25px
 }
-/* THREE COLUMNS - end */
+/* THREE BOX - end */
 
-/* FIRST COLUMN - start */
-/* Input lines from column 1 - start */
+/* FIRST BOX - start */
+/* Input lines from box 1 - start */
 .col .row {
     margin-left: 0;
     margin-right: 0;
 }
-/* Input lines from column 1 - end */
+/* Input lines from box 1 - end */
 
 #user_list {
     margin-top:0;
@@ -65,19 +65,20 @@ a.brand-logo {
     opacity: .35;
 }
 
-#submit-ing-btn {
+.btn-small {
     letter-spacing: 0px;
     background: lightgrey;
-    border-radius: 25px
+    border-radius: 25px;
+    margin: 1px 0 10px 13px;
 }
 
 .recent-ing-box {
     padding: 0;
     margin: 0;
 }
-/* FIRST COLUMN - end */
+/* FIRST BOX - end */
 
-/* SECOND COLUMN - start */
+/* SECOND BOX - start */
 /* Recipes Boxes - start */
 .card #recipe-boxes {
     border: 3px orange solid;
@@ -118,9 +119,9 @@ a.brand-logo {
     border: 1px black solid;
     margin: 10px 30px 0 0;
 }
-/* SECOND COLUMN - end */
+/* SECOND BOX - end */
 
-/* THIRD COLUMN - start*/
+/* THIRD BOX - start*/
 #recipe-ingredients, #nutrition-facts {
     text-decoration: underline;
 }
