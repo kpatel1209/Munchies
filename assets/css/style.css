@@ -43,7 +43,7 @@ a.brand-logo {
     opacity: .35;
 }
 
-.ing-submit-btn {
+#submit-ing-btn {
     letter-spacing: 0px;
     background: lightgrey;
     border-radius: 25px
