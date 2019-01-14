@@ -65,12 +65,18 @@ a.brand-logo {
     opacity: .35;
 }
 
+/* ADD, REMOVE, SUBMIT BUTTONS - start */
+.add-remove-submit {
+    margin-right: 15px;
+}
+
 .btn-small {
     letter-spacing: 0px;
     background: lightgrey;
     border-radius: 25px;
-    margin: 1px 0 10px 13px;
+    margin: 1px 0 5px 10px;
 }
+/* ADD, REMOVE, SUBMIT BUTTONS - end */
 
 .recent-ing-box {
     padding: 0;
