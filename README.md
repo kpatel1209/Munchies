@@ -1,2 +1,2 @@
-# Project-1
+# Munchies
 Group Project 1
