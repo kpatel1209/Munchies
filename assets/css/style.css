@@ -7,15 +7,27 @@ body {
     -o-background-size: cover;
 }
 
-.main-content {
-    padding-top: 20px;
-    margin-top: 5px;
+/* NAVBAR - start*/
+#navbar {
+    height: 80px;
 }
 
+/* Munchies "Logo" - start */
 a.brand-logo {
-    font-size: 43px;
-    padding-top: 5px;
+    font-size: 50px;
+    padding-top: 3px;
 }
+
+#quote {
+    font-family: 'Coiny', cursive;
+    font-size: 20px;
+    padding: 43px 0 0 0;
+}
+
+#navbar-links {
+    margin: 11px 0 0 0;
+}
+/* NAVBAR - end*/
 
 .container {
     margin: 0 auto;
@@ -23,16 +35,26 @@ a.brand-logo {
     width: 100%;
 }
 
-.card {
+/* THREE COLUMNS - start */
+.main-content {
+    padding-top: 20px;
+    margin-top: 10px;
+}
+
+.three-columns {
     border: 5px teal solid;
     min-height: 600px;
     border-radius: 25px
 }
+/* THREE COLUMNS - end */
 
+/* FIRST COLUMN - start */
+/* Input lines from column 1 - start */
 .col .row {
     margin-left: 0;
     margin-right: 0;
 }
+/* Input lines from column 1 - end */
 
 #user_list {
     margin-top:0;
@@ -52,4 +74,58 @@ a.brand-logo {
 .recent-ing-box {
     padding: 0;
     margin: 0;
+}
+/* FIRST COLUMN - end */
+
+/* SECOND COLUMN - start */
+/* Recipes Boxes - start */
+.card #recipe-boxes {
+    border: 3px orange solid;
+    display: inline-block;
+    left: 5%;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    width: 90%;
+    height: 23%;
+    border-radius: 25px;
+}
+
+.card #recipe-content {
+    margin: 0;
+    padding: 0;
+}
+
+.recipe-text{
+    float: left;
+    font-weight: bold;
+    margin: 10px 0 0 30px;
+}
+
+#recipe-name {
+    text-decoration: underline;
+}
+
+#fav-icon {
+    float: right;
+    margin: 0 10px 0 0;
+}
+
+#recipe-image {
+    float: right;
+    width: 75px;
+    height: auto;
+    border: 1px black solid;
+    margin: 10px 30px 0 0;
+}
+/* SECOND COLUMN - end */
+
+/* THIRD COLUMN - start*/
+#recipe-ingredients, #nutrition-facts {
+    text-decoration: underline;
+}
+
+.ingredientLines, .nutrition {
+    margin: 0;
+    padding: 0;
 }
