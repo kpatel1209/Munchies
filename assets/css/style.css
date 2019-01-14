@@ -22,6 +22,7 @@ a.brand-logo {
     font-family: 'Coiny', cursive;
     font-size: 20px;
     padding: 43px 0 0 0;
+    overflow: hidden;
 }
 
 #navbar-links {
@@ -41,7 +42,7 @@ a.brand-logo {
     margin-top: 10px;
 }
 
-.three-boxes {
+.three-boxes, .grocery-box {
     border: 5px teal solid;
     min-height: 600px;
     border-radius: 25px
@@ -90,7 +91,7 @@ a.brand-logo {
     border: 3px orange solid;
     display: inline-block;
     left: 5%;
-    margin: 0;
+    margin: 0 0 20px 0;
     padding: 0;
     position: absolute;
     width: 90%;
