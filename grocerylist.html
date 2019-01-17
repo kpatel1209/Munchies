@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons|Coiny|Roboto" rel="stylesheet">    
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <title>Munchies - "Click click recipe"</title>
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <div class="navbar-fixed">
+        <nav class="teal" id="navbar">
+            <div class="container">
+                <div class="nav-wrapper">
+                    <div class="header">
+                        <a href="./index.html" class="brand-logo center" style="font-family: 'Coiny', cursive;">MUNCHIES</a>
+                        <h6 class="brand-logo center" id="quote">"Click click recipe"</h6>
+                    </div>
+                    <a href="#" data-target="mobile-nav" class="sidenav-trigger">
+                        <i class="material-icons">menu</i>
+                    </a>
+                    <ul class="right hide-on-med-and-down" id="navbar-links">
+                        <li>
+                            <a href="./index.html" style="font-family: 'Roboto', sans-serif; font-size: 17px;">Home</a>
+                        </li>
+                        <li>
+                            <a href="#favorites" style="font-family: 'Roboto', sans-serif; font-size: 17px;">Favorites</a>
+                        </li>
+                        <li>
+                            <a href="#grocery-list" style="font-family: 'Roboto', sans-serif; font-size: 17px;">Grocery List</a>
+                        </li>
+                        <li>
+                            <a href="#login" style="font-family: 'Roboto', sans-serif; font-size: 17px;">Login</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <!-- Mobile Navbar -->
+    <ul class="sidenav" id="mobile-nav">
+        <li>
+            <a href="./index.html" style="font-family: 'Roboto', sans-serif; font-size: 17px;">Home</a>
+        </li>
+        <li>
+            <a href="#favorites" style="font-family: 'Roboto', sans-serif; font-size: 17px;">Favorites</a>
+        </li>
+        <li>
+            <a href="#grocery-list" style="font-family: 'Roboto', sans-serif; font-size: 17px;">Grocery List</a>
+        </li>
+        <li>
+            <a href="#login" style="font-family: 'Roboto', sans-serif; font-size: 17px;">Login</a>
+        </li>
+    </ul>
+
+    <!-- Section: Grocery List -->
+    <section class="main-content">
+        <div class="container">
+            <div class="row">
+                <div class="col s12 m4 offset-m4" id="grocery-list-box">
+                    <div class="card grocery-box" style="background-color:rgba(0, 0, 0, 0.75);">
+                        <div class="new-ing-box">
+                            <h5 class="center" id="enter-your-ingredients-header" style="color: white; font-family: 'Roboto', sans-serif;"><strong>Grocery List:</strong></h5>
+                            <div class="row">
+                                <div class="input-field col s12" id="user-ing-input">
+                                    <input type="text" class="autocomplete" id="new-ingredient" placeholder="(Entry Required)" style="height: 2rem; font-size: 13px; color: white;">
+                                    <input type="text" class="autocomplete" id="new-ingredient" placeholder="(Entry Required)" style="height: 2rem; font-size: 13px; color: white;">
+                                    <input type="text" class="autocomplete" id="new-ingredient" placeholder="(Entry Required)" style="height: 2rem; font-size: 13px; color: white;">
+                                    <input type="text" class="autocomplete" id="new-ingredient" placeholder="(Entry Required)" style="height: 2rem; font-size: 13px; color: white;">
+                                    <input type="text" class="autocomplete" id="new-ingredient" placeholder="(Entry Required)" style="height: 2rem; font-size: 13px; color: white;">
+                                </div>    
+                                <div class="add-remove-submit center">
+                                    <a class="waves-effect waves-light btn-small" id="add-ing-btn" style="font-size: 13px; color: black; font-weight: bold;">Add</a>
+                                    <a class="waves-effect waves-light btn-small" id="remove-ing-btn" style="font-size: 13px; color: black; font-weight: bold;">Remove</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="assets/javascript/app.js"></script>
+    <script src="assets/javascript/ajax.js"></script>
+
+</body>
+</html>
