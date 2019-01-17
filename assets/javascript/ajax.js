@@ -22,11 +22,11 @@ $(document).ready(function() {
             let prep = results[i].recipe.totalTime;
             let servings = results[i].recipe.yield;
 
-            console.log("Recipe Name: ",  name);
-            console.log("Image Link: ", img);
-            console.log("Diet Type: ", diet);
-            console.log("Prep Time: ", prep);
-            console.log("Servings: ", servings);
+            // console.log("Recipe Name: ",  name);
+            // console.log("Image Link: ", img);
+            // console.log("Diet Type: ", diet);
+            // console.log("Prep Time: ", prep);
+            // console.log("Servings: ", servings);
         }
     })
 })
