@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <!--Import Google Icon Font-->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons|Coiny|Roboto" rel="stylesheet">    
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons|Coiny|Roboto" rel="stylesheet">
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <title>Munchies - "Click click recipe"</title>
@@ -66,12 +66,12 @@
         <div class="container">
             <div class="row">
                 <div class="col s12 m3" id="first-box">
-                    <div class="card three-boxes" style="background-color:rgba(0, 0, 0, 0.75);">
-                        <div class="new-ing-box">
+                    <div class="card three-boxes scroll-box scroll2" style="background-color:rgba(0, 0, 0, 0.75);">
+                        <div class="new-ing-box ">
                             <h5 class="center" id="enter-your-ingredients-header" style="color: white; font-family: 'Roboto', sans-serif;"><strong>Enter Your Ingredients:</strong></h5>
                             <div class="row">
-                                <div class="input-field col s12" id="user_ing-input">
-                                    <!-- New Ingredient fields have an autocomplete function; need to add an array of popular ingredients to js file and link to input fields  -->
+                                <div class="input-field col s12" id="user-ing-input">
+                                    <!-- New Ingredient fields have an autocomplete function; -->
                                     <input type="text" class="autocomplete" id="new-ingredient" placeholder="(Entry Required)" style="height: 2rem; font-size: 13px; color: white;">
                                 </div>    
                                 <div class="add-remove-submit center">
@@ -95,7 +95,7 @@
                     </div>
                 </div>
                 <div class="col s12 m6" id="second-box">
-                    <div class="card three-boxes" style="background-color:rgba(0, 0, 0, 0.75);">
+                    <div class="card three-boxes scroll-box scroll2" style="background-color:rgba(0, 0, 0, 0.75);">
                         <h5 class="center" style="color: white; font-family: 'Roboto', sans-serif;" ><strong>List of Recipes:</strong></h5>
                         <div class="row">
                             <div class="col s12">
@@ -112,7 +112,7 @@
                                             <p class="yield">Servings: </p>
                                         </div>
                                         <div>    
-                                            <img src="assets/images/recipe-image-example.jpg" id="recipe-image">
+                                            <img src="assets/images/recipe-image-example.jpg" id="recipe-image" alt="recipe-image">
                                         </div>
                                     </div>
                                 </div>
@@ -121,20 +121,33 @@
                     </div>
                 </div>
                 <div class="col s12 m3" id="third-box">
-                    <div class="card three-boxes" style="background-color:rgba(0, 0, 0, 0.75);">
+                    <div class="card three-boxes scroll-box scroll2" style="background-color:rgba(0, 0, 0, 0.75);">
                         <h5 class="center" style="color: white; font-family: 'Roboto', sans-serif;" ><strong>Information:</strong></h5>
                         <div class="row">
                             <div class="col s12">
-                                <h6 class="white-text" id="recipe-ingredients" style="color: white; font-family: 'Roboto', sans-serif;"><strong></strong>Recipe Ingredients:</strong></h6>
+                                <h6 class="white-text" id="recipe-ingredients" style="color: white; font-family: 'Roboto', sans-serif;"><strong>Recipe Ingredients:</strong></h6>
                                 <p class="ingredientLines" style="color: white; font-family: 'Roboto', sans-serif;">1/2 lb chicken</p>
-                                <p class="recipeURL" style="color: white; font-family: 'Roboto', sans-serif;"></p>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col s12">
-                                <h6 class="white-text" id="nutrition-facts" style="color: white; font-family: 'Roboto', sans-serif;"><strong></strong>Nutrition Facts:</strong></h6>
-                                <p class="nutrition" style="color: white; font-family: 'Roboto', sans-serif;">Calories: </p>
+                                <h6 class="white-text" id="url" style="color: white; font-family: 'Roboto', sans-serif;"><strong>Recipe Website:</strong></h6>                            
+                                <a href="#" class="recipeURL" style="color: white; font-family: 'Roboto', sans-serif;">www.food.com</a>
                             </div>
+                        </div>    
+                        <div class="row">
+                            <div class="col s12">
+                                <h6 class="white-text" id="youtube-video" style="color: white; font-family: 'Roboto', sans-serif;"><strong>Need Help With This Recipe?</strong></h6>
+                                <input type="text" name="search" id="search" placeholder="Find a Video for Guidance" style="height: 2rem; font-size: 13px; color: white;">
+                                <div class="youtube-buttons center">    
+                                    <button type="button" class="tokenClass" value="Previous"><i class="material-icons lightgrey center">navigate_before</i></button>
+                                    <button type="submit" id="searchButton" value="search"><i class="material-icons lightgrey center">play_circle_filled</i></button>
+                                    <button type="button" class="tokenClass" value="Next"><i class="material-icons lightgrey center">navigate_next</i></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col s12 center" id="output"></div>
                         </div>
                     </div>
                 </div>
@@ -142,11 +155,19 @@
         </div>
     </section>
 
+    <div class="overlayBg"></div>
+        <div class="popup">
+            <iframe id="player" width="560" height="315" src="https://www.youtube.com/embed/" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+
+    <footer>&copy; Copyright 2019 Munchies</footer>
+
     <!-- Compiled and minified JavaScript -->
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <script type="text/javascript" src="assets/javascript/app.js"></script>
-    <script type="text/javascript" src="assets/javascript/ajax.js"></script>
+    <script src="assets/javascript/app.js"></script>
+    <script src="assets/javascript/ajax.js"></script>
+    <script src="assets/javascript/youtube-ajax.js"></script>
 
 </body>
 </html>

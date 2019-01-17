@@ -1,10 +1,15 @@
-body {
-    background-image: url(../images/main-food-background.jpg);
-    background-repeat: no-repeat;
+html {
+    background: url(../images/main-food-background.jpg) no-repeat center center fixed;
     background-size: cover;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 1280px;
+    width: 100%;
 }
 
 /* NAVBAR - start*/
@@ -12,7 +17,6 @@ body {
     height: 80px;
 }
 
-/* Munchies "Logo" - start */
 a.brand-logo {
     font-size: 50px;
     padding-top: 3px;
@@ -30,13 +34,7 @@ a.brand-logo {
 }
 /* NAVBAR - end*/
 
-.container {
-    margin: 0 auto;
-    max-width: 1280px;
-    width: 100%;
-}
-
-/* THREE BOX - start */
+/* ALL THREE BOXES - start */
 .main-content {
     padding-top: 20px;
     margin-top: 10px;
@@ -44,10 +42,10 @@ a.brand-logo {
 
 .three-boxes, .grocery-box {
     border: 5px teal solid;
-    min-height: 600px;
+    min-height: 575px;
     border-radius: 25px
 }
-/* THREE BOX - end */
+/* ALL THREE BOXES - end */
 
 /* FIRST BOX - start */
 /* Input lines from box 1 - start */
@@ -57,16 +55,15 @@ a.brand-logo {
 }
 /* Input lines from box 1 - end */
 
-#user_list {
+/* #user_list {
     margin-top:0;
-}
+} */
 
 ::placeholder {
     color: grey lighten-5;
     opacity: .35;
 }
 
-/* ADD, REMOVE, SUBMIT BUTTONS - start */
 .add-remove-submit {
     margin-right: 15px;
 }
@@ -75,9 +72,8 @@ a.brand-logo {
     letter-spacing: 0px;
     background: lightgrey;
     border-radius: 25px;
-    margin: 1px 0 5px 10px;
+    margin: 1px;
 }
-/* ADD, REMOVE, SUBMIT BUTTONS - end */
 
 .recent-ing-box {
     padding: 0;
@@ -93,9 +89,9 @@ a.brand-logo {
     left: 5%;
     margin: 0 0 20px 0;
     padding: 0;
-    position: absolute;
+    position: relative;
     width: 90%;
-    height: 23%;
+    height: 130px;
     border-radius: 25px;
 }
 
@@ -129,11 +125,83 @@ a.brand-logo {
 /* SECOND BOX - end */
 
 /* THIRD BOX - start*/
-#recipe-ingredients, #nutrition-facts {
+#recipe-ingredients, #youtube-video, #url {
     text-decoration: underline;
 }
 
-.ingredientLines, .nutrition {
+.ingredientLines, .nutrition, .recipeURL {
     margin: 0;
     padding: 0;
 }
+
+/* SCROLL BAR - start */
+.scroll2::-webkit-scrollbar {
+    width: 0px;
+  }
+   
+.scroll2::-webkit-scrollbar-thumb {
+    background: #666; 
+  }
+
+.scroll-box {
+    overflow-y: scroll;
+    height: 100px;
+    padding: 1rem
+}
+/* SCROLL BAR - end */
+
+/* FOOTER - start */
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: teal;
+    color: white;
+    text-align: center;
+}
+/* FOOTER - end */
+
+/* YOUTUBE - start */
+.thumbnail {
+    border: 3px orange solid;
+    width: 200px;
+    height: auto;
+    margin: 0 0 40px 0;
+    border-radius: 25px;
+}
+
+.title {
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    font-weight: bold;
+    text-align: center;   
+}
+
+#searchButton {
+    margin: 0 20px 0 20px;
+}
+
+.popup {
+    background-color: black;
+    position: absolute;
+    border: solid 2px white;
+    width: auto;
+    min-height: auto;
+    z-index: 5000;
+    top: 31%;
+    left: 31.8%;
+    margin: auto;
+}
+
+.overlayBg {
+    background-color: #333;
+    opacity: 0.5;
+    position: absolute;
+    z-index: 1000;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    min-height: 100%;
+}
+/* YOUTUBE - end */
