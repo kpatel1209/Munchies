@@ -104,13 +104,13 @@ $(document).ready(function() {
 
         for (let i = 0; i < recipeIngredients.length; i++) {
             let ingredientSide = $(`
-                <p class="ingredientLines" style="color: white; font-family: 'Roboto', sans-serif;">${recipeIngredients[i]}</p>
+                <p class="ingredientLines" style="color: white; font-family: 'Roboto', sans-serif;">- ${recipeIngredients[i]}</p>
             `);
             $("#ingredient-list").append(ingredientSide);
         };
         
         let urlSide = $(`
-            <a href="${recipeURL}" class="recipeURL" style="color: white; font-family: 'Roboto', sans-serif;">${recipeURL}</a>
+            <a href="${recipeURL}" class="recipeURL" target="_blank" style="color: white; font-family: 'Roboto', sans-serif;">${recipeURL}</a>
         `);
         
         $("#recipe-url").append(urlSide);
