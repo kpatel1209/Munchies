@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-    let ingredientList = [];
+    // let ingredientList = [];
 
     // $("#add-ing-btn").on("change", function(){
     //     let ingred = $("#user-ing-input").val(this.value);
@@ -13,7 +13,7 @@ $(document).ready(function() {
         
         let searchResult = ["beef", "onion"];
 
-        console.log(searchResult);
+        // console.log(searchResult);
 
         // Clear local storage for this search results
         localStorage.clear();
@@ -25,6 +25,7 @@ $(document).ready(function() {
             method: "GET"
         })
         .then(function(response) {
+            // Console log the queryURL and response
             // console.log(queryURL);
             // console.log(response);
     
@@ -37,21 +38,25 @@ $(document).ready(function() {
                 let prep = results[i].recipe.totalTime;
                 let servings = results[i].recipe.yield;
                 let ingredients = results[i].recipe.ingredientLines;
+                let url = results[i].recipe.url;
     
                 // Console log each of the API call results
-                console.log("Recipe Name: ", name);
-                console.log("Image Link: ", img);
-                console.log("Diet Type: ", diet);
-                console.log("Prep Time: ", prep);
-                console.log("Servings: ", servings);
-                
+                // console.log("Recipe Name: ", name);
+                // console.log("Image Link: ", img);
+                // console.log("Diet Type: ", diet);
+                // console.log("Prep Time: ", prep);
+                // console.log("Servings: ", servings);
+                // console.log("Ingredients List: ", ingredients);
+                // console.log("URL: ", url);
+
                 // Store all the required results into local storage
-                localStorage.setItem("name", JSON.stringify(name));
-                localStorage.setItem("image", JSON.stringify(img));
-                localStorage.setItem("diet", JSON.stringify(diet));
-                localStorage.setItem("prep", JSON.stringify(prep));
-                localStorage.setItem("servings", JSON.stringify(servings));
-                localStorage.setItem("ingredients", JSON.stringify(ingredients));
+                localStorage.setItem(`name${[i]}`, JSON.stringify(name));
+                localStorage.setItem(`image${[i]}`, JSON.stringify(img));
+                localStorage.setItem(`diet${[i]}`, JSON.stringify(diet));
+                localStorage.setItem(`prep${[i]}`, JSON.stringify(prep));
+                localStorage.setItem(`servings${[i]}`, JSON.stringify(servings));
+                localStorage.setItem(`ingredients${[i]}`, JSON.stringify(ingredients));
+                localStorage.setItem(`url${[i]}`, JSON.stringify(url));
     
                 // Add the HTML for the recipe card to the DOM with the results from the API call
                 let recipe = $(`
@@ -66,9 +71,10 @@ $(document).ready(function() {
                                         </h6>
                                     </div>                                        
                                     <div class="recipe-text">
-                                        <p class="prep">Prep Time: ${prep}</p>
+                                        <p class="prep">Prep Time: ${prep} minutes</p>
                                         <p class="diet">Diet: ${diet}</p>
                                         <p class="yield">Servings: ${servings}</p>
+                                        <a class="view-button waves-effect waves-light btn-small" data-index="${i}" style="font-size: 13px; color: black; font-weight: bold;">View</a>
                                     </div>
                                     <div>    
                                         <img src="${img}" id="recipe-image">
@@ -77,12 +83,40 @@ $(document).ready(function() {
                             </div>
                         </div>
                     </div>
-                `);
+              `);
     
-                $("#recipe-loadins").append(recipe);
+                // Append the recipe data to display to the HTML
+                $("#recipe-loadins").append(recipe);  // recipe-loadins id to HTML
             }
          })
     });
 });
+
+    $(document).on("click", '.view-button', function() {
+        let index = ("index", $(this).data('index'));
+        // console.log(index);
+        
+        let recipeName = JSON.parse(localStorage.getItem(`name${index}`));
+        let recipeIngredients = JSON.parse(localStorage.getItem(`ingredients${index}`));
+        let recipeURL = JSON.parse(localStorage.getItem(`url${index}`));
+
+        console.log(recipeIngredients);
+
+        for (let i = 0; i < recipeIngredients.length; i++) {
+            let ingredientSide = $(`
+                <p class="ingredientLines" style="color: white; font-family: 'Roboto', sans-serif;">${recipeIngredients[i]}</p>
+            `);
+            $("#ingredient-list").append(ingredientSide);
+        };
+        
+        let urlSide = $(`
+            <a href="${recipeURL}" class="recipeURL" style="color: white; font-family: 'Roboto', sans-serif;">${recipeName}</a>
+        `);
+        
+        $("#recipe-url").append(urlSide);
+    });
+    
+    
+})
 
 
