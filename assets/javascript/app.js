@@ -16,7 +16,7 @@ $(document).ready(function(){
     let newIngLine = '<input type="text" class="autocomplete" id="new-ingredient" placeholder="(Entry Required)" style="height: 2rem; font-size: 13px; color: white;">'; //New input field
     let x = 1; //Initial field counter is 1
 
-    // Function for ADD ingredient button which allows user to add lines to enter additional ingredients.
+    // Function for the ADD ingredient button which allows user to add lines to enter additional ingredients.
     $(addIngButton).click(function(event){
         event.preventDefault();
         //Check max number of input fields
@@ -29,11 +29,13 @@ $(document).ready(function(){
             });
         };
     });
-    // Function for REMOVE ingredient button which allows user to remove lines that they originally added.  Since the ADD function is prepending a new line, the REMOVE function will now remove the most recent line added.
+    // Function for the REMOVE ingredient button which allows user to remove lines that they originally added.  Since the ADD function is prepending a new line, the REMOVE function will now remove the most recent line added.
     $(removeIngButton).click(function(event){
         event.preventDefault();
         $("#new-ingredient").remove();
         x--;
         // console.log(removeIngButton);
     });
+
+    // 
 });
