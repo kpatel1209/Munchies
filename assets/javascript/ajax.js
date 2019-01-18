@@ -115,8 +115,5 @@ $(document).ready(function() {
         
         $("#recipe-url").append(urlSide);
     });
-    
-    
-})
 
 
