@@ -45,7 +45,7 @@ a.brand-logo {
 .three-boxes, .grocery-box {
     border: 5px teal solid;
     min-height: 600px;
-    border-radius: 25px
+    border-radius: 25px;
 }
 /* THREE BOX - end */
 
@@ -92,8 +92,8 @@ a.brand-logo {
     display: inline-block;
     left: 5%;
     margin: 0 0 20px 0;
-    padding: 0;
-    position: absolute;
+    padding: 0 0 20px 0;
+    position: relative;
     width: 90%;
     height: 23%;
     border-radius: 25px;

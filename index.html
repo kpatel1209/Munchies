@@ -70,10 +70,12 @@
                         <div class="new-ing-box">
                             <h5 class="center" id="enter-your-ingredients-header" style="color: white; font-family: 'Roboto', sans-serif;"><strong>Enter Your Ingredients:</strong></h5>
                             <div class="row">
-                                <div class="input-field col s12" id="user_ing-input">
+                                <div class="input-field col s12" id="user-ing-input">
+                                    <input type="text" class="autocomplete" placeholder="(Entry Required)" style="height: 2rem; font-size: 13px; color: white;">
+                                </div>  
+                                <div class="text-field col s12" id="new-ingredient">
                                     <!-- New Ingredient fields have an autocomplete function; need to add an array of popular ingredients to js file and link to input fields  -->
-                                    <input type="text" class="autocomplete" id="new-ingredient" placeholder="(Entry Required)" style="height: 2rem; font-size: 13px; color: white;">
-                                </div>    
+                                </div>  
                                 <div class="add-remove-submit center">
                                     <a class="waves-effect waves-light btn-small" id="add-ing-btn" style="font-size: 13px; color: black; font-weight: bold;">Add</a>
                                     <a class="waves-effect waves-light btn-small" id="remove-ing-btn" style="font-size: 13px; color: black; font-weight: bold;">Remove</a>
@@ -95,29 +97,9 @@
                     </div>
                 </div>
                 <div class="col s12 m6" id="second-box">
-                    <div class="card three-boxes" style="background-color:rgba(0, 0, 0, 0.75);">
+                    <div class="card three-boxes" id="recipe-loadin" style="background-color:rgba(0, 0, 0, 0.75);">
                         <h5 class="center" style="color: white; font-family: 'Roboto', sans-serif;" ><strong>List of Recipes:</strong></h5>
-                        <div class="row">
-                            <div class="col s12">
-                                <div class="card" id="recipe-boxes">
-                                    <div class="card-content" id="recipe-content">
-                                        <div class="recipe-title">
-                                            <h6 class="lable center" id="recipe-name"><strong>Recipe Name</strong>
-                                                <i class="material-icons" id="fav-icon">favorite_border</i>
-                                            </h6>
-                                        </div>                                        
-                                        <div class="recipe-text">
-                                            <p class="prep">Prep Time: </p>
-                                            <p class="diet">Diet: </p>
-                                            <p class="yield">Servings: </p>
-                                        </div>
-                                        <div>    
-                                            <img src="assets/images/recipe-image-example.jpg" id="recipe-image">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        <!-- Insert Recipe Data from Javascript -->
                     </div>
                 </div>
                 <div class="col s12 m3" id="third-box">
