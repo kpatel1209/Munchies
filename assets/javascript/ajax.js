@@ -79,9 +79,10 @@ $(document).ready(function() {
                     </div>
                 `);
     
-                $("#recipe-loadin").append(recipe);
+                $("#recipe-loadins").append(recipe);
             }
-        })
+         })
     });
+});
 
 
