@@ -83,13 +83,14 @@ $(document).ready(function() {
                             </div>
                         </div>
                     </div>
-                `);
+              `);
     
                 // Append the recipe data to display to the HTML
                 $("#recipe-loadins").append(recipe);  // recipe-loadins id to HTML
             }
-        })
+         })
     });
+});
 
     $(document).on("click", '.view-button', function() {
         let index = ("index", $(this).data('index'));
