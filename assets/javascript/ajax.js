@@ -84,11 +84,4 @@ $(document).ready(function() {
         })
     });
 
-    $("#recipe-boxes").on("click", function() {
-
-    })
-    
-    
-})
-
 
