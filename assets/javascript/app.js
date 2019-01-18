@@ -19,6 +19,8 @@ $(document).ready(function(){
     // Function for the ADD ingredient button which allows user to add lines to enter additional ingredients.
     $(addIngButton).click(function(event){
         event.preventDefault();
+        let food = addIngButton.val(this.value);
+        console.log(food);
         //Check max number of input fields
         if(x < maxField) {
             x++; //Incrememnt field counter
@@ -37,10 +39,5 @@ $(document).ready(function(){
         // console.log(removeIngButton);
     });
 
-    // Recent Ingredients
-
-
-
-
-
+    // 
 });

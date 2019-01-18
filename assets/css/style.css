@@ -29,6 +29,10 @@ a.brand-logo {
     overflow: hidden;
 }
 
+h6 { 
+    white-space: nowrap;
+}
+
 #navbar-links {
     margin: 11px 0 0 0;
 }
@@ -91,7 +95,7 @@ a.brand-logo {
     padding: 0;
     position: relative;
     width: 90%;
-    height: 130px;
+    height: 175px;
     border-radius: 25px;
 }
 
@@ -103,11 +107,20 @@ a.brand-logo {
 .recipe-text{
     float: left;
     font-weight: bold;
-    margin: 5px 0 0 30px;
+    margin: 5px 10px 0 20px;
+}
+
+.view-button {
+    margin: 15px 0 0 0;
 }
 
 .card .card-content p {
     margin: 8px 0 0 0;
+}
+
+.recipe-title {
+    overflow: hidden;
+    white-space: nowrap;
 }
 
 #recipe-name {
@@ -121,10 +134,13 @@ a.brand-logo {
 
 #recipe-image {
     float: right;
+    /* position: absolute 1px; */
     width: 75px;
+    max-width: 100%;
     height: auto;
     border: 1px black solid;
-    margin: 10px 30px 0 0;
+    margin: 5px 15px 0 20px;
+    overflow: hidden;
 }
 /* SECOND BOX - end */
 
@@ -209,3 +225,23 @@ footer {
     min-height: 100%;
 }
 /* YOUTUBE - end */
+
+@media only screen and (max-width: 770px) {
+    #recipe-image{ 
+        width: 65px;
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+@media only screen and (max-width: 376px) {
+    .card .card-content p { 
+        font-size: 12px;
+    }
+}
+
+@media only screen and (max-width: 397px) {
+    #quote {
+        overflow: hidden;
+    }
+}

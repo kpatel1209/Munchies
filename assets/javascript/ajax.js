@@ -1,34 +1,119 @@
 $(document).ready(function() {
+
+    // let ingredientList = [];
+
+    // $("#add-ing-btn").on("change", function(){
+    //     let ingred = $("#user-ing-input").val(this.value);
+    //     // let ingredientList = [];
+    //     // ingredientList.push(ingred);
+    //     console.log(ingred);
+    // });
     
+    $("#submit-ing-btn").on("click", function(){
+        
+        let searchResult = ["beef", "onion"];
+
+        // console.log(searchResult);
+
+        // Clear local storage for this search results
+        localStorage.clear();
+
+        let queryURL = "https://api.edamam.com/search?q=" + searchResult + "&app_id=6d5a3956&app_key=7fec86da650323ec5cbd0d0c2ed5e986";
+
+        $.ajax({
+            url: queryURL,
+            method: "GET"
+        })
+        .then(function(response) {
+            // Console log the queryURL and response
+            // console.log(queryURL);
+            // console.log(response);
     
-    let searchResult = "beef";
+            let results = response.hits;
+    
+            for (let i = 0; i < results.length; i++) {
+                let name = results[i].recipe.label;
+                let img = results[i].recipe.image;
+                let diet = results[i].recipe.dietLabels;
+                let prep = results[i].recipe.totalTime;
+                let servings = results[i].recipe.yield;
+                let ingredients = results[i].recipe.ingredientLines;
+                let url = results[i].recipe.url;
+    
+                // Console log each of the API call results
+                // console.log("Recipe Name: ", name);
+                // console.log("Image Link: ", img);
+                // console.log("Diet Type: ", diet);
+                // console.log("Prep Time: ", prep);
+                // console.log("Servings: ", servings);
+                // console.log("Ingredients List: ", ingredients);
+                // console.log("URL: ", url);
 
-    let queryURL = "https://api.edamam.com/search?q=" + searchResult + "&app_id=6d5a3956&app_key=7fec86da650323ec5cbd0d0c2ed5e986";
+                // Store all the required results into local storage
+                localStorage.setItem(`name${[i]}`, JSON.stringify(name));
+                localStorage.setItem(`image${[i]}`, JSON.stringify(img));
+                localStorage.setItem(`diet${[i]}`, JSON.stringify(diet));
+                localStorage.setItem(`prep${[i]}`, JSON.stringify(prep));
+                localStorage.setItem(`servings${[i]}`, JSON.stringify(servings));
+                localStorage.setItem(`ingredients${[i]}`, JSON.stringify(ingredients));
+                localStorage.setItem(`url${[i]}`, JSON.stringify(url));
+    
+                // Add the HTML for the recipe card to the DOM with the results from the API call
+                let recipe = $(`
+                    <div class="row">
+                        <div class="col s12">
+                            <div class="card" id="recipe-boxes">
+                                <div class="card-content" id="recipe-content">
+                                    <div class="recipe-title">
+                                        <h6 class="lable center" id="recipe-name"> 
+                                            <strong>${name}</strong>
+                                            <i class="material-icons" id="fav-icon">favorite_border</i>
+                                        </h6>
+                                    </div>                                        
+                                    <div class="recipe-text">
+                                        <p class="prep">Prep Time: ${prep} minutes</p>
+                                        <p class="diet">Diet: ${diet}</p>
+                                        <p class="yield">Servings: ${servings}</p>
+                                        <a class="view-button waves-effect waves-light btn-small" data-index="${i}" style="font-size: 13px; color: black; font-weight: bold;">View Info</a>
+                                    </div>
+                                    <div>    
+                                        <img src="${img}" id="recipe-image">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+              `);
+    
+                // Append the recipe data to display to the HTML
+                $("#recipe-loadins").append(recipe);  // recipe-loadins id to HTML
+            }
+         })
+    });
+});
 
-    $.ajax({
-        url: queryURL,
-        method: "GET"
-    })
-    .then(function(response) {
-        // console.log(queryURL);
-        // console.log(response);
+    $(document).on("click", '.view-button', function() {
+        let index = ("index", $(this).data('index'));
+        // console.log(index);
+        
+        let recipeName = JSON.parse(localStorage.getItem(`name${index}`));
+        let recipeIngredients = JSON.parse(localStorage.getItem(`ingredients${index}`));
+        let recipeURL = JSON.parse(localStorage.getItem(`url${index}`));
 
-        let results = response.hits;
+        console.log(recipeIngredients);
 
-        for (let i = 0; i < results.length; i++) {
-            let name = results[i].recipe.label;
-            let img = results[i].recipe.image;
-            let diet = results[i].recipe.dietLabels;
-            let prep = results[i].recipe.totalTime;
-            let servings = results[i].recipe.yield;
-
-            // console.log("Recipe Name: ",  name);
-            // console.log("Image Link: ", img);
-            // console.log("Diet Type: ", diet);
-            // console.log("Prep Time: ", prep);
-            // console.log("Servings: ", servings);
-        }
-    })
-})
+        for (let i = 0; i < recipeIngredients.length; i++) {
+            let ingredientSide = $(`
+                <p class="ingredientLines" style="color: white; font-family: 'Roboto', sans-serif;">${recipeIngredients[i]}</p>
+            `);
+            $("#ingredient-list").append(ingredientSide);
+        };
+        
+        let urlSide = $(`
+            <a href="${recipeURL}" class="recipeURL" style="color: white; font-family: 'Roboto', sans-serif;">${recipeURL}</a>
+        `);
+        
+        $("#recipe-url").append(urlSide);
+    });
 
 
