@@ -103,7 +103,11 @@ a.brand-logo {
 .recipe-text{
     float: left;
     font-weight: bold;
-    margin: 10px 0 0 30px;
+    margin: 5px 0 0 30px;
+}
+
+.card .card-content p {
+    margin: 8px 0 0 0;
 }
 
 #recipe-name {
