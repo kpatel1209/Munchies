@@ -74,7 +74,7 @@ $(document).ready(function() {
                                         <p class="prep">Prep Time: ${prep} minutes</p>
                                         <p class="diet">Diet: ${diet}</p>
                                         <p class="yield">Servings: ${servings}</p>
-                                        <a class="view-button waves-effect waves-light btn-small" data-index="${i}" style="font-size: 13px; color: black; font-weight: bold;">View</a>
+                                        <a class="view-button waves-effect waves-light btn-small" data-index="${i}" style="font-size: 13px; color: black; font-weight: bold;">View Info</a>
                                     </div>
                                     <div>    
                                         <img src="${img}" id="recipe-image">
@@ -110,7 +110,7 @@ $(document).ready(function() {
         };
         
         let urlSide = $(`
-            <a href="${recipeURL}" class="recipeURL" style="color: white; font-family: 'Roboto', sans-serif;">${recipeName}</a>
+            <a href="${recipeURL}" class="recipeURL" style="color: white; font-family: 'Roboto', sans-serif;">${recipeURL}</a>
         `);
         
         $("#recipe-url").append(urlSide);
