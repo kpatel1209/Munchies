@@ -39,8 +39,9 @@ $(document).ready(function() {
         // console.log(removeIngButton);
     });
 
-    $("#submit-ing-btn").on("click", function() {
-
+    $("#submit-ing-btn").on("click", function(event) {
+        event.preventDefault();
+        
         $("#recipe-loadins").empty();
         
         // Clear local storage for this search results
