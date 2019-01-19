@@ -131,7 +131,7 @@ h6 {
 }
 
 #fav-icon {
-    position: absolute;
+    position: absolute 1px;
     float: right;
     margin: 0 10px 0 0;
 }
