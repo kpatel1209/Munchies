@@ -1,6 +1,6 @@
 /* Lesson #1 - Basic styles, header, buttons */
 html {
-	background: url(../images/main-food-background.jpg) no-repeat center center fixed;
+    background: url(../images/main-food-background.jpg) no-repeat center center fixed;
     background-size: cover;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -61,7 +61,7 @@ h1{
 	font-family: 'Nothing You Could Do', cursive;
 }
 
-img{
+img {
 	width: 100%;
 }
 
@@ -76,23 +76,23 @@ button {
 	margin-left: 10px;
 }
 
-button:hover{
+button:hover {
 	background: linear-gradient(#a6d1ec, #32a1d7);
 }
 
-button:focus{
+button:focus {
 	outline: none
 }
 
-.hide{
+.hide {
 	display: none !important;
 }
 
-.auth{
+.auth {
 	cursor: pointer;
 }
 
-#header{
+#header {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	grid-column-gap: 40px;
@@ -100,32 +100,29 @@ button:focus{
 	padding: 20px 40px 30px 40px;
 }
 
-
-
-
-#profile-photo-header{
+#profile-photo-header {
 	max-width: 60px;
 	border-radius: 100px;
 	margin-top: 10px;
 	float: right
 }
 
-#user-details-header{
+#user-details-header {
 	text-align: left
 }
 
-#sign-in-link-header{
+#sign-in-link-header {
 	padding: 0px 20px 0px 10px;
 	transition: 0.5s;
 }
 
-#sign-in-link-header:hover{
+#sign-in-link-header:hover {
 	padding: 0px 20px 0px 20px;
 	border-left: 1px solid #32a1d7
 }
 
 /* Lesson #1 Footer */
-#footer{
+#footer {
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
 	background-color: #f9f4f4;
@@ -133,7 +130,7 @@ button:focus{
 }
 
 /* Lesson #2 Modal */
-#modal{
+#modal {
 	display:none;
 	position: fixed;
 	z-index: 1;
@@ -146,14 +143,14 @@ button:focus{
 	margin-top: 5%;
 }
 
-#modal-content{
+#modal-content {
 	background-color: #fefefe;
 	margin: 4% auto;
 	border: 1px solid #888888;
 	max-width: 350px;
 }
 
-#close{
+#close {
 	float: right;
 	margin-right: -15px;
 	margin-top: -15px;
@@ -162,59 +159,59 @@ button:focus{
 	border-radius: 100px;
 }
 
-#close:hover, #close:focus{
+#close:hover, #close:focus {
 	text-decoration: none;
 	cursor: pointer;
 }
 
 
 /* Lesson #3 Forms and Toggle */
-input{
+input {
 	width: 100%;
 	font-size: 20px;
 	padding: 10px 0px 10px 0px;
 	border-width: 0px 0px 2px 0px;
 }
 
-input::placeholder{
+input::placeholder {
 	color: #989898
 }
 
-input:focus{
+input:focus {
 	border-color: green;
 	outline: none;
 }
 
-#authentication{
+#authentication {
 	padding: 40px 20px 20px 20px;
 }
 
-#sign-in-link, #create-user-link{
+#sign-in-link, #create-user-link {
 	color: #32a1d7
 }
 
-#create-user-inputs, #sign-in-inputs{
+#create-user-inputs, #sign-in-inputs {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	grid-gap: 20px;
 	margin-bottom: 30px;
 }
 
-#forgot-password-inputs{
+#forgot-password-inputs {
 	margin-bottom: 20px;
 }
 
-#forgot-password-link{
+#forgot-password-link {
 	text-align: right;
 	font-size: 10px;
 	margin-top: -17px;
 }
 
-#create-user-display-name{
+#create-user-display-name {
 	grid-column-end: span 1;
 }
 
-#have-or-need-account-dialog{
+#have-or-need-account-dialog {
 	padding-top: 10px;
 }
 
@@ -224,24 +221,22 @@ input:focus{
 	background-color: teal;
 	padding: 30px;
 	border-radius: 20px;
-	
 }
 
-#dashboard{
+#dashboard {
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
 	grid-gap: 20px;
 	padding: 20px 40px 50px 40px;
-	
 }
 
-#profile-photo-account{
+#profile-photo-account {
 	max-width: 150px;
 	margin: auto;
 	border-radius: 100px;
 }
 
-#display-name{
+#display-name {
 	margin: 30px 20px;
 	float: right;
 	font-family: 'Roboto', sans-serif;
@@ -254,7 +249,7 @@ h3{
 
 
 /* Lesson #9 Handling error and success messages */
-#message{
+#message {
 	display: none;
 	border: 1px solid;
 	position: relative;
@@ -263,11 +258,11 @@ h3{
 }
 
 /* Lesson #10 Loading visual cue */
-#loading-outer-container{
+#loading-outer-container {
 	margin: 40px auto;
 }
 
-#loading-inner-container{
+#loading-inner-container {
 	position: relative;
 	width: 40px;
 	height: 40px;
@@ -277,7 +272,7 @@ h3{
 	top: 20%;
 }
 
-#loadspin{
+#loadspin {
 	width: 40px;
 	height: 40px;
 	position: absolute;
@@ -288,11 +283,11 @@ h3{
 	background-color: #39B1C6;
 }
 
-#circle2{
+#circle2 {
 	background-color: #EC3F8C;
 }
 
-#circle1, #circle2{
+#circle1, #circle2 {
 	width: 100%;
 	height: 100%;
 	border-radius: 50%;
@@ -304,7 +299,7 @@ h3{
 	animation:bounce 2s infinite ease-in-out;
 }
 
-#circle2{
+#circle2 {
 	-webkit-animation-delay: -1s;
 	animation-delay: -1s;
 }
@@ -318,35 +313,32 @@ h3{
 	}
 }
 
-
 @webkit-keyframes bounce {
-	0%, 100%{
+	0%, 100% {
 		-webkit-transform: scale(0)
 	}
-	50%{
+	50% {
 		-webkit-transform: scale(1)
 	}
 }
 
-
 /* Lesson #11 Email verificaiton */
-#email-not-verified-notification{
+#email-not-verified-notification {
 	background-color: red;
 	color: white;
 	font-size: 12px;
 	padding: 4px;
 }
 
-
 /* Lesson #13 Prepare for OAuth */
-#oauth-providers-grid{
+#oauth-providers-grid {
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr 1fr;
 	grid-gap: 45px;
 	padding-bottom: 40px;
 }
 
-#or{
+#or {
 	border-top: 2px solid #EFEFEF;
 	position: relative;
 	margin-bottom: 40px;
@@ -363,14 +355,14 @@ h3{
 }
 
 /* Lesson #18 Delete account */
-#show-delete-account-dialog-trigger{
+#show-delete-account-dialog-trigger {
 	color: red;
 	text-align: center;
 	margin-top: 30px;
 	font-size: 12px;
 }
 
-#delete-account-dialog{
+#delete-account-dialog {
 	color: red;
 	text-align: center;
 	border-radius: 5px;
@@ -380,18 +372,18 @@ h3{
 	background-color: white;
 }
 
-#delete-account-dialog > p{
+#delete-account-dialog > p {
 	font-size: 12px;
 	margin: 0px;
 }
 
-#hide-delete-account-dialog-trigger:hover{
+#hide-delete-account-dialog-trigger:hover {
 	background-color: linear-gradient(#FF8597, red)
 }
 
 
 /* Lesson #20 To do list application */
-.delete-button{
+.delete-button {
 	margin-left: 20px;
 }
 
@@ -428,8 +420,6 @@ footer {
     margin-left: 0;
     margin-right: 0;
 }
-
-
 
 /* SCROLL BAR - start */
 .scroll2::-webkit-scrollbar {
