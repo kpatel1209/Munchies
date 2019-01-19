@@ -46,7 +46,7 @@ h6 {
 
 .three-boxes, .grocery-box {
     border: 5px teal solid;
-    min-height: 575px;
+    min-height: 565px;
     border-radius: 25px
 }
 /* ALL THREE BOXES - end */
@@ -81,7 +81,7 @@ h6 {
 
 .recent-ing-box {
     padding: 0;
-    margin: 0;
+    margin: 0 0 0 0;
 }
 /* FIRST BOX - end */
 
@@ -92,7 +92,7 @@ h6 {
     display: inline-block;
     left: 5%;
     margin: 0 0 20px 0;
-    padding: 0;
+    padding: 0 10px 0 10px;
     position: relative;
     width: 90%;
     height: 175px;
@@ -125,6 +125,9 @@ h6 {
 
 #recipe-name {
     text-decoration: underline;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
 }
 
 #fav-icon {
@@ -155,7 +158,10 @@ h6 {
 }
 
 a.recipeURL {
-
+    width: 30px;
+    /* text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden; */
 }
 
 /* SCROLL BAR - start */
@@ -183,6 +189,9 @@ footer {
     background-color: teal;
     color: white;
     text-align: center;
+    height: 4%;
+    font-weight: bold;
+    padding: 6px 0 0 0;
 }
 /* FOOTER - end */
 
