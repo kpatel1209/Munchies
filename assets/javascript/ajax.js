@@ -41,6 +41,8 @@ $(document).ready(function() {
 
     $("#submit-ing-btn").on("click", function() {
 
+        $("#recipe-loadins").empty();
+        
         // Clear local storage for this search results
         localStorage.clear();
 
