@@ -121,5 +121,3 @@ $(document).ready(function() {
         
         $(".recipeURL").html(urlSide);
     });
-
-

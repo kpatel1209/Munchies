@@ -7,6 +7,12 @@ html {
     -o-background-size: cover;
 }
 
+body{
+	font-family: 'Open Sans', sans-serif;
+	margin: 0px;
+	color: gray;
+	text-align: center
+}
 
 .container {
     margin: 0 auto;
@@ -19,8 +25,18 @@ html {
     height: 80px;
 }
 
+nav .brand-logo {
+	font-size: 0;
+    padding-top: 3px;
+}
+
 a.brand-logo {
-    font-size: 50px;
+    font-size: 0x;
+    padding-top: 3px;
+}
+
+nav .brand-logo {
+	font-size: 50px;
     padding-top: 3px;
 }
 
@@ -37,13 +53,6 @@ h6 {
 
 #navbar-links {
     margin: 11px 0 0 0;
-}
-
-body {
-	font-family: 'Open Sans', sans-serif;
-	margin: 0px;
-	color: gray;
-	text-align: center
 }
 
 h1{
@@ -90,9 +99,6 @@ button:focus {
 	text-align: left;
 	padding: 20px 40px 30px 40px;
 }
-
-
-
 
 #profile-photo-header {
 	max-width: 60px;
@@ -215,7 +221,6 @@ input:focus {
 	background-color: teal;
 	padding: 30px;
 	border-radius: 20px;
-	
 }
 
 #dashboard {
@@ -223,7 +228,6 @@ input:focus {
 	grid-template-columns: 1fr 1fr 1fr;
 	grid-gap: 20px;
 	padding: 20px 40px 50px 40px;
-	
 }
 
 #profile-photo-account {
@@ -309,7 +313,6 @@ h3{
 	}
 }
 
-
 @webkit-keyframes bounce {
 	0%, 100% {
 		-webkit-transform: scale(0)
@@ -319,7 +322,6 @@ h3{
 	}
 }
 
-
 /* Lesson #11 Email verificaiton */
 #email-not-verified-notification {
 	background-color: red;
@@ -327,7 +329,6 @@ h3{
 	font-size: 12px;
 	padding: 4px;
 }
-
 
 /* Lesson #13 Prepare for OAuth */
 #oauth-providers-grid {
@@ -419,8 +420,6 @@ footer {
     margin-left: 0;
     margin-right: 0;
 }
-
-
 
 /* SCROLL BAR - start */
 .scroll2::-webkit-scrollbar {
