@@ -46,7 +46,7 @@ h6 {
 
 .three-boxes, .grocery-box {
     border: 5px teal solid;
-    min-height: 575px;
+    min-height: 565px;
     border-radius: 25px
 }
 /* ALL THREE BOXES - end */
@@ -81,7 +81,7 @@ h6 {
 
 .recent-ing-box {
     padding: 0;
-    margin: 0;
+    margin: 0 0 0 0;
 }
 /* FIRST BOX - end */
 
@@ -92,7 +92,7 @@ h6 {
     display: inline-block;
     left: 5%;
     margin: 0 0 20px 0;
-    padding: 0;
+    padding: 0 10px 0 10px;
     position: relative;
     width: 90%;
     height: 175px;
@@ -119,15 +119,19 @@ h6 {
 }
 
 .recipe-title {
-    overflow: hidden;
+    /* overflow: hidden; */
     white-space: nowrap;
 }
 
 #recipe-name {
     text-decoration: underline;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
 }
 
 #fav-icon {
+    position: absolute;
     float: right;
     margin: 0 10px 0 0;
 }
@@ -139,7 +143,7 @@ h6 {
     max-width: 100%;
     height: auto;
     border: 1px black solid;
-    margin: 5px 15px 0 20px;
+    margin: 30px 15px 0 20px;
     overflow: hidden;
 }
 /* SECOND BOX - end */
@@ -152,6 +156,13 @@ h6 {
 .ingredientLines, .nutrition, .recipeURL {
     margin: 0;
     padding: 0;
+}
+
+a.recipeURL {
+    width: 30px;
+    /* text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden; */
 }
 
 /* SCROLL BAR - start */
@@ -179,6 +190,9 @@ footer {
     background-color: teal;
     color: white;
     text-align: center;
+    height: 4%;
+    font-weight: bold;
+    padding: 6px 0 0 0;
 }
 /* FOOTER - end */
 
@@ -195,7 +209,8 @@ footer {
     font-family: 'Roboto', sans-serif;
     color: white;
     font-weight: bold;
-    text-align: center;   
+    text-align: center; 
+    margin: 0 0 5px 0;  
 }
 
 #searchButton {

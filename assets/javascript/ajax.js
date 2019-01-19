@@ -83,12 +83,12 @@ $(document).ready(function() {
                             </div>
                         </div>
                     </div>
-              `);
+                `);
     
                 // Append the recipe data to display to the HTML
                 $("#recipe-loadins").append(recipe);  // recipe-loadins id to HTML
             }
-         })
+        })
     });
 });
 
@@ -100,20 +100,26 @@ $(document).ready(function() {
         let recipeIngredients = JSON.parse(localStorage.getItem(`ingredients${index}`));
         let recipeURL = JSON.parse(localStorage.getItem(`url${index}`));
 
-        console.log(recipeIngredients);
+        // console.log(recipeIngredients);
 
-        for (let i = 0; i < recipeIngredients.length; i++) {
+        $("#ingredient-list").empty();
+
+        $("#ingredient-list").html(`
+            <h6 class="white-text" id="recipe-ingredients" style="color: white; font-family: 'Roboto', sans-serif;"><strong>Recipe Ingredients:</strong></h6>
+        `)
+
+        for (let i = 0; i < recipeIngredients.length; i++) { 
             let ingredientSide = $(`
-                <p class="ingredientLines" style="color: white; font-family: 'Roboto', sans-serif;">${recipeIngredients[i]}</p>
+                <p class="ingredientLines" style="color: white; font-family: 'Roboto', sans-serif;">- ${recipeIngredients[i]}</p>
             `);
             $("#ingredient-list").append(ingredientSide);
         };
         
         let urlSide = $(`
-            <a href="${recipeURL}" class="recipeURL" style="color: white; font-family: 'Roboto', sans-serif;">${recipeURL}</a>
+            <a href="${recipeURL}" class="recipeURL" target="_blank" style="color: white; font-family: 'Roboto', sans-serif;">${recipeURL}</a>
         `);
         
-        $("#recipe-url").append(urlSide);
+        $(".recipeURL").html(urlSide);
     });
 
 
