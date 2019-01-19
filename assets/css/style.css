@@ -249,9 +249,12 @@ footer {
     }
 }
 
-@media only screen and (max-width: 376px) {
+@media only screen and (max-width: 375px) {
     .card .card-content p { 
         font-size: 12px;
+        width: 45px;
+        max-width: 100%;
+        height: auto;
     }
 }
 
