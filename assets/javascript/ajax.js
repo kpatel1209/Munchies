@@ -43,7 +43,7 @@ $(document).ready(function() {
         event.preventDefault();
         
         $("#recipe-loadins").empty();
-        $("#recipe-loadins").html('<h5 class="center" style="color: white; font-family: 'Roboto', sans-serif;" ><strong>List of Recipes:</strong></h5>');
+        // $("#recipe-loadins").html('<h5 class="center" style="color: white; font-family: 'Roboto', sans-serif;" ><strong>List of Recipes:</strong></h5>');
         
         // Clear local storage for this search results
         localStorage.clear();
