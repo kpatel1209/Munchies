@@ -138,7 +138,7 @@ h6 {
 
 #recipe-image {
     float: right;
-    /* position: absolute 1px; */
+    position: absolute 1px;
     width: 75px;
     max-width: 100%;
     height: auto;
