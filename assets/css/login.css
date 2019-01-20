@@ -122,12 +122,20 @@ button:focus {
 }
 
 /* Lesson #1 Footer */
-#footer {
-	display: grid;
-	grid-template-columns: 1fr 1fr 1fr;
-	background-color: #f9f4f4;
-	padding: 30px 20px 50px 20px;
+/* FOOTER - start */
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: teal;
+    color: white;
+    text-align: center;
+    height: 4%;
+    font-weight: bold;
+    padding: 6px 0 0 0;
 }
+/* FOOTER - end */
 
 /* Lesson #2 Modal */
 #modal {
