@@ -27,7 +27,7 @@ body{
 
 nav .brand-logo {
 	font-size: 0;
-    padding-top: 3px;
+    	padding-top: 3px;
 }
 
 a.brand-logo {
@@ -55,10 +55,14 @@ h6 {
     margin: 11px 0 0 0;
 }
 
+nav.i {
+	
+}
+
 h1{
 	margin:  0px 0px 20px 0px;
 	font-size: 24px;
-	font-family: 'Nothing You Could Do', cursive;
+	font-family: 'Roboto', sans-serif;
 }
 
 img {
