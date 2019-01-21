@@ -14,83 +14,82 @@ var config = {
     messagingSenderId: "147067036281"
 }
 
-firebase.initializeApp(config)
+firebase.initializeApp(config);
 
 // Reference to auth method of Firebase
-var auth = firebase.auth()
+var auth = firebase.auth();
 
 // Reference to storage method of Firebase
-var storage = firebase.storage()
+var storage = firebase.storage();
 
 // Reference to database method of Firebase
-var database = firebase.database()
+var database = firebase.database();
 
 // UID needs to global. Declare here but get the value from the auth state listener
-var uid 
+var uid;
 
 // Get the modal
-const modal = document.getElementById(`modal`)
+const modal = document.getElementById(`modal`);
 
 // Get the element that closes the modal
-const close = document.getElementById(`close`)
+const close = document.getElementById(`close`);
 
 // When the user clicks the (x) button close the modal
 close.addEventListener(`click`, () => {
     modal.style.display = `none`
-})
+});
 
 // When the user click anywhere outside of the modal close it.
 window.addEventListener(`click`, event => {
 	if (event.target == modal){
 		modal.style.display = `none`
 	}
-})
-
+});
 
 // Get forms for email and password authentication
-const createUserForm = document.getElementById('create-user-form')
-const signInForm = document.getElementById('sign-in-form')
-const forgotPasswordForm = document.getElementById('forgot-password-form')
+const createUserForm = document.getElementById('create-user-form');
+const signInForm = document.getElementById('sign-in-form');
+const forgotPasswordForm = document.getElementById('forgot-password-form');
 
 // Get element that holds OAuth providers
-const oauthProviders = document.getElementById('oauth-providers')
+const oauthProviders = document.getElementById('oauth-providers');
 
 // Get the authentication dialogs
-const createUserDialog = document.getElementById('create-user-dialog')
-const signInDialog = document.getElementById('sign-in-dialog')
-const hideOrNeedAccountDialog = document.getElementById('have-or-need-account-dialog')
-const deleteAccountDialog = document.getElementById('delete-account-dialog')
+const createUserDialog = document.getElementById('create-user-dialog');
+const signInDialog = document.getElementById('sign-in-dialog');
+const hideOrNeedAccountDialog = document.getElementById('have-or-need-account-dialog');
+const deleteAccountDialog = document.getElementById('delete-account-dialog');
 
 // Get trigger to show delete account dialog
-const showDeleteAccountDialogTrigger = document.getElementById('show-delete-account-dialog-trigger')
+const showDeleteAccountDialogTrigger = document.getElementById('show-delete-account-dialog-trigger');
 
 // Get elements that need to be hidden or shown based on auth state
-const hideWhenSignedIn = document.querySelectorAll('.hide-when-signed-in')
-const hideWhenSignedOut = document.querySelectorAll('.hide-when-signed-out')
+const hideWhenSignedIn = document.querySelectorAll('.hide-when-signed-in');
+const hideWhenSignedOut = document.querySelectorAll('.hide-when-signed-out');
 
 // Get element where email not verified notification will be placed
-const emailNotVerifiedNotification = document.getElementById(`email-not-verified-notification`)
+const emailNotVerifiedNotification = document.getElementById(`email-not-verified-notification`);
 
 // Get element that is the input we will click to upload our profile photo file
-const uploadProfilePhotoButton = document.getElementById('upload-profile-photo-button')
+const uploadProfilePhotoButton = document.getElementById('upload-profile-photo-button');
 
 // Get elements where we will place our users photos at
-const profilePhotoAccount = document.getElementById('profile-photo-account')
-const profilePhotoHeader = document.getElementById('profile-photo-header')
+const profilePhotoAccount = document.getElementById('profile-photo-account');
+const profilePhotoHeader = document.getElementById('profile-photo-header');
 
 // Get element that shows the progress of the photo uploading action
-const progressBar = document.getElementById('progress-bar')
+const progressBar = document.getElementById('progress-bar');
 
 // Get element that we will display our success and error messages 
-const authMessage = document.getElementById(`message`)
+const authMessage = document.getElementById(`message`);
 
 // access auth elements to listen for auth actions
-const authAction = document.querySelectorAll(`.auth`)
+const authAction = document.querySelectorAll(`.auth`);
 
 // Loop through elements and use the auth attribute to determine what action to take when clicked
 authAction.forEach(eachItem => {
 	eachItem.addEventListener(`click`, event => {
-		let chosen = event.target.getAttribute(`auth`)
+		let chosen = event.target.getAttribute(`auth`);
 		if (chosen === 'show-create-user-form'){
 			showCreateUserForm()
 		} else if (chosen === 'show-sign-in-form'){
