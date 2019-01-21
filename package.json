@@ -1,0 +1,24 @@
+{
+  "name": "munchies",
+  "version": "1.0.0",
+  "description": "recipe cooking app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kpatel1209/Project-1.git"
+  },
+  "keywords": [
+    "food",
+    "cooking",
+    "grocery"
+  ],
+  "author": "Joel, Kevin, Ben, Kyle aka Cypher",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kpatel1209/Project-1/issues"
+  },
+  "homepage": "https://github.com/kpatel1209/Project-1#readme"
+}
