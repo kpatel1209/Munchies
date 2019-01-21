@@ -27,7 +27,7 @@ body{
 
 nav .brand-logo {
 	font-size: 0;
-    	padding-top: 3px;
+    padding-top: 3px;
 }
 
 a.brand-logo {
@@ -47,6 +47,12 @@ nav .brand-logo {
     overflow: hidden;
 }
 
+#sign-in {
+	margin: 5px 0 0 0;
+}
+
+
+
 h6 { 
     white-space: nowrap;
 }
@@ -55,18 +61,21 @@ h6 {
     margin: 11px 0 0 0;
 }
 
-nav.i {
-	
-}
-
 h1{
 	margin:  0px 0px 20px 0px;
 	font-size: 24px;
-	font-family: 'Roboto', sans-serif;
+	font-family: 'Nothing You Could Do', cursive;
 }
 
 img {
 	width: 100%;
+}
+
+#create-user-header-link {
+	letter-spacing: 0px;
+    background: lightgrey;
+    border-radius: 25px;
+    margin: 5px 0 0 3px;
 }
 
 button {
@@ -126,20 +135,12 @@ button:focus {
 }
 
 /* Lesson #1 Footer */
-/* FOOTER - start */
-footer {
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    background-color: teal;
-    color: white;
-    text-align: center;
-    height: 4%;
-    font-weight: bold;
-    padding: 6px 0 0 0;
+#footer {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	background-color: #f9f4f4;
+	padding: 30px 20px 50px 20px;
 }
-/* FOOTER - end */
 
 /* Lesson #2 Modal */
 #modal {
