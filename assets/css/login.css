@@ -416,15 +416,15 @@ h3{
 }
 
 footer {
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    background-color: teal;
-    color: white;
-    text-align: center;
-    height: 4%;
-    font-weight: bold;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: teal;
+  color: white;
+  text-align: center;
+  height: 4%;
+  font-weight: bold;
 	padding: 6px 0 0 0;
 	font-family: 'Roboto', sans-serif;
 }
