@@ -135,7 +135,7 @@ $(document).ready(function() {
         $("#ingredient-list").empty();
 
         $("#ingredient-list").html(`
-            <h6 class="white-text" id="recipe-ingredients" style="color: white; font-family: 'Roboto', sans-serif;"><strong>Recipe Ingredients:</strong></h6>
+            <h6 class="white-text" id="recipe-ingredients" style="color: white; font-family: 'Roboto', sans-serif;">Recipe Ingredients:</h6>
         `)
 
         for (let i = 0; i < recipeIngredients.length; i++) { 
@@ -151,5 +151,5 @@ $(document).ready(function() {
         
         $(".recipeURL").html(urlSide);
     });
-
 });
+
