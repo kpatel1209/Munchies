@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Munchies - "Click click recipe"</title>
 		<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
-		<link rel="stylesheet" href=".//assets/css/login.css">
-		
-		<link rel="icon" href="images/favicon.png" type="images/png">
+		<!--Import Google Icon Font-->
 		<link href="https://fonts.googleapis.com/icon?family=Material+Icons|Coiny|Roboto" rel="stylesheet">
+    	<!-- Compiled and minified CSS -->
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+		<title>Munchies - "Click click recipe"</title>
+		<link rel="stylesheet" href="./assets/css/login.css">
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
 		<script src="https://www.gstatic.com/firebasejs/5.7.2/firebase-app.js"></script>
 		<script src="https://www.gstatic.com/firebasejs/5.7.2/firebase-auth.js"></script>
@@ -33,17 +33,16 @@
 					<a href="#" data-target="mobile-nav" class="sidenav-trigger">
 						<i class="material-icons">menu</i>
 					</a>
-					<ul class="right hide-on-med-and-down">
+					<ul class="right hide-on-med-and-down" id="navbar-links">
 						<li>
-							<a href="./index.html" style="font-family: 'Roboto', sans-serif; font-size: 17px; margin-top: 13%"><i class="fas fa-home"></i></a>
-						</li>
-						<li>
-							<a href="./404.html" class="right hide-on-med-and-down" style="font-family: 'Roboto', sans-serif; font-size: 17px; margin-top: 13%"><i class="fas fa-heart"></i></i></a>
-						</li>
-						<li>
-							<div class="hide-when-signed-in" style="float: left">
-								<span id="sign-in-header-link" class="auth" auth="show-sign-in-form" style="font-size: 17px">Sign In</span>
-								<button id="create-user-header-link" class="auth" auth="show-create-user-form" style="font-size: 17px">Create User</button>
+                            <a href="./main.html" style="font-family: 'Roboto', sans-serif; font-size: 17px;"><i class="fas fa-home"></i></a>
+                        </li>
+                        <li>
+                            <a href="./404.html" style="font-family: 'Roboto', sans-serif; font-size: 17px;"><i class="fas fa-heart"></i></i></a>
+                        </li>
+							<div class="hide-when-signed-in" id="sign-in" style="float: left">
+								<!-- <span id="sign-in-header-link" class="auth" auth="show-sign-in-form" style="font-size: 17px; margin-top: 10%;">Sign In</span> -->
+								<button id="create-user-header-link" class="auth" auth="show-create-user-form" style="font-size: 17px; font-family: 'Roboto', sans-serif; color: black;">Create User</button>
 							</div>
 						</li>
 						<li>
@@ -52,59 +51,50 @@
 							</div>
 						</li>
 					</ul>
+				</div>
 			</div>
-			
 		</nav>
 	</div>
 
     <!-- Mobile Navbar -->
     <ul class="sidenav" id="mobile-nav">
             <li>
-                <a href="./index.html" style="font-family: 'Roboto', sans-serif; font-size: 17px;"><i class="fas fa-home"></i></a>
+                <a href="./main.html" style="font-family: 'Roboto', sans-serif; font-size: 17px;"><i class="fas fa-home"></i></a>
             </li>
             <li>
                 <a href="./404.html" style="font-family: 'Roboto', sans-serif; font-size: 17px;"><i class="fas fa-heart"></i></i></a>
             </li>
             <li>
-                <a href="#login" style="font-family: 'Roboto', sans-serif; font-size: 17px;"><i class="fas fa-user"></i></a>
-            </li>
-			
-           
+                <a href="./index.html" style="font-family: 'Roboto', sans-serif; font-size: 17px;"><i class="fas fa-user"></i></a>
+            </li>           
     </ul>
 		<!-- Header -->
 
-		
-
 		<!-- Dashboard -->
-		<div id="dashboard" class="hide-when-signed-out main-content">
-				<div class="row">
-						<div class="col s12">
-						  <div class="card-panel teal">
-								<form id="to-do-list-form">
-										<h3>Grocery List</h3>
-										<input type="text" id="item" placeholder="Task", required autocomplete="off" style="color: white">
-										<button class="btn waves-effect waves-light" type="submit" name="action"><i class="fas fa-utensils"> Grocery</i>
-										  </button>
-									</form>
-						  </div>
-						</div>
-					  </div>
-			
-			
-					<div class="col s12 m4">
-							<div class="card-panel teal">
-									<h3>Grocery</h3>
-									<div id="to-do-list-items" style="color: white; font-size: 17px"></div>
-							</div>
-						  </div>
-				<div class="col s12 m4">
-					<div class="card-panel teal">
-							
-					
-							<img src=".//assets/images/munchbowl.png" alt="user" id="profile-photo-account">
 		
+		
+	<section class="main-content">
+		<div class="container sign-out-box">
+			<!-- <div id="dashboard" class="hide-when-signed-out main-content"> -->
+				<div class="row">
+					<!-- <div class="col s12 m4">
+						<div class="card three-boxes" style="background-color:rgba(0, 0, 0, 0.75);">
+							<form id="to-do-list-form" class="add-item">
+								<h3>Grocery List</h3>
+								<input type="text" id="item" placeholder="Task", required autocomplete="off" style="height: 2rem; font-size: 13px; color: white; font-family: 'Roboto', sans-serif;">
+								<button class="waves-effect waves-light btn-small" type="submit" name="action" style="font-size: 13px; color: black; font-weight: bold;font-family: 'Roboto', sans-serif;">Add Item</i></button>
+							</form>
+						</div>
+					</div>	 -->
+					<div class="col s12 m4">
+						<div class="card three-boxes" style="background-color:rgba(0, 0, 0, 0.75);">
+							<img src=".//assets/images/munchbowl.png" alt="user" id="profile-photo-account">
 							<div>
-							<button class="auth" auth="sign-out">Sign Out</button>
+								<button class="waves-effect waves-light btn-small auth" id="sign-in-btn" auth="show-sign-in-form" type="submit" name="action" style="font-size: 13px; color: black; font-weight: bold;font-family: 'Roboto', sans-serif;">Sign In</i></button>
+							</div>
+							<div>
+								<button class="waves-effect waves-light btn-small auth" id="sign-out-btn" auth="sign-out" type="submit" name="action" style="font-size: 13px; color: black; font-weight: bold;font-family: 'Roboto', sans-serif;">Sign Out</i></button>
+								<!-- <button class="auth" auth="sign-out">Sign Out</button> -->
 							</div>
 							<div id="show-delete-account-dialog-trigger" class="auth" auth="show-delete-account-dialog">Delete Account</div>
 							<div id="delete-account-dialog" class="hide">
@@ -113,14 +103,22 @@
 								<button id="hide-delete-account-dialog-trigger" class="auth" auth="hide-delete-account-dialog">Cancel</button>
 							</div>
 						</div>
+					</div>
+					<div class="col s12 m4">
+						<!-- <div class="card three-boxes" style="background-color:rgba(0, 0, 0, 0.75);">
+							<h3>Grocery</h3>
+							<div id="to-do-list-items" style="color: white; font-size: 17px"></div>
+						</div> -->
+					</div>
 				</div>
-			</div>
-		</div>
+			<!-- </div> -->
+		</div>	
+	</section>
 		<!-- Dashboard -->
 		
 
 		<!-- Footer -->
-		<footer>&copy; Copyright 2019 Munchies</footer>
+		<!-- <footer>&copy; Copyright 2019 Munchies</footer> -->
 		<!-- Footer -->
 
 
@@ -219,9 +217,10 @@
 			<!-- Modal Content -->
 		</div>
 		<!-- Modal -->
-		<script src=".//assets/javascript/side.js"></script>
+
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-		<script src=".//assets/javascript/login.js"></script>
+		<script src="./assets/javascript/side.js"></script>
+		<script src="./assets/javascript/login.js"></script>
 		
 	</body>
 </html>

@@ -8,10 +8,7 @@ html {
 }
 
 body{
-	font-family: 'Open Sans', sans-serif;
-	margin: 0px;
-	color: gray;
-	text-align: center
+	text-align: center;
 }
 
 .container {
@@ -31,7 +28,7 @@ nav .brand-logo {
 }
 
 a.brand-logo {
-    font-size: 0x;
+    font-size: 50px;
     padding-top: 3px;
 }
 
@@ -45,6 +42,16 @@ nav .brand-logo {
     font-size: 20px;
     padding: 43px 0 0 0;
     overflow: hidden;
+}
+
+#sign-in {
+	margin: 2px 0 0 0;
+}
+
+.row {
+	width: 100%;
+	margin-left: 33.3333333333%;
+	margin-top: 6%;
 }
 
 h6 { 
@@ -65,23 +72,43 @@ img {
 	width: 100%;
 }
 
-button {
-	padding: 5px 8px 5px 8px;
+#create-user-header-link {
+	letter-spacing: 0px;
+    background: lightgrey;
+    border-radius: 25px;
+    margin: 5px 0 0 3px;
+}
+
+/* button {
+	/* padding: 5px 8px 5px 8px;
 	background: linear-gradient(#a29b9b, gray);
 	color: white;
-	border: 0px;
-	border-radius: 2px;
-	font-size: 17px;
+	border: 0px; */
+	/* border-radius: 25px; */
+	/* font-size: 17px;
 	margin-top: 20px;
 	margin-left: 10px;
+}*/
+
+.add-item {
+	margin-right: 15px;
+	border-radius: 25px;
 }
 
-button:hover {
-	background: linear-gradient(#a6d1ec, #32a1d7);
+.btn-small {
+	letter-spacing: 0px;
+    background: lightgrey;
+    border-radius: 25px;
+    margin: 1px;
 }
+
+
+/* button:hover {
+	background: linear-gradient(#a6d1ec, #32a1d7);
+} */
 
 button:focus {
-	outline: none
+	outline: none;
 }
 
 .hide {
@@ -103,12 +130,15 @@ button:focus {
 #profile-photo-header {
 	max-width: 60px;
 	border-radius: 100px;
-	margin-top: 10px;
-	float: right
+	margin-top: 0;
+	float: right;
+	border: 3px orange solid;
+	height: auto;
+	
 }
 
 #user-details-header {
-	text-align: left
+	text-align: left;
 }
 
 #sign-in-link-header {
@@ -118,15 +148,7 @@ button:focus {
 
 #sign-in-link-header:hover {
 	padding: 0px 20px 0px 20px;
-	border-left: 1px solid #32a1d7
-}
-
-/* Lesson #1 Footer */
-#footer {
-	display: grid;
-	grid-template-columns: 1fr 1fr 1fr;
-	background-color: #f9f4f4;
-	padding: 30px 20px 50px 20px;
+	border-left: 1px solid #32a1d7;
 }
 
 /* Lesson #2 Modal */
@@ -174,7 +196,7 @@ input {
 }
 
 input::placeholder {
-	color: #989898
+	color: #989898;
 }
 
 input:focus {
@@ -187,7 +209,7 @@ input:focus {
 }
 
 #sign-in-link, #create-user-link {
-	color: #32a1d7
+	color: #32a1d7;
 }
 
 #create-user-inputs, #sign-in-inputs {
@@ -231,20 +253,22 @@ input:focus {
 }
 
 #profile-photo-account {
-	max-width: 150px;
-	margin: auto;
+	max-width: 100px;
+	margin: 6% 0 0 0;
 	border-radius: 100px;
+	border: 3px orange solid;
+	height: auto;
 }
 
 #display-name {
-	margin: 30px 20px;
+	margin: 20px 20px;
 	float: right;
 	font-family: 'Roboto', sans-serif;
 	font-size: 20px;
 }
 
 h3{
-	color: white
+	color: white;
 }
 
 
@@ -304,7 +328,7 @@ h3{
 	animation-delay: -1s;
 }
 
-@-webkit-keyframes bounce {
+/* @-webkit-keyframes bounce {
 	0%, 100%{
 		-webkit-transform: scale(0)
 	}
@@ -320,7 +344,9 @@ h3{
 	50% {
 		-webkit-transform: scale(1)
 	}
-}
+} */
+
+
 
 /* Lesson #11 Email verificaiton */
 #email-not-verified-notification {
@@ -358,7 +384,7 @@ h3{
 #show-delete-account-dialog-trigger {
 	color: red;
 	text-align: center;
-	margin-top: 30px;
+	margin: 35px 0 0 0;
 	font-size: 12px;
 }
 
@@ -378,7 +404,7 @@ h3{
 }
 
 #hide-delete-account-dialog-trigger:hover {
-	background-color: linear-gradient(#FF8597, red)
+	background-color: linear-gradient(#FF8597, red);
 }
 
 
@@ -395,6 +421,10 @@ footer {
     background-color: teal;
     color: white;
     text-align: center;
+    height: 4%;
+    font-weight: bold;
+	padding: 6px 0 0 0;
+	font-family: 'Roboto', sans-serif;
 }
 
 /* ALL THREE BOXES - start */
@@ -403,23 +433,31 @@ footer {
     margin-top: 10px;
 }
 
-.card-panel {
+/* .card-panel {
 	opacity: 0.8;
+} */
+
+.card {
+	
+}
+
+#sign-in-btn, #sign-out-btn {
+	margin: 20px 0 0 0;
 }
 
 .three-boxes, .grocery-box {
     border: 5px teal solid;
-    min-height: 575px;
-    border-radius: 25px
+    min-height: 300px;
+    border-radius: 25px;
 }
 /* ALL THREE BOXES - end */
 
 /* FIRST BOX - start */
 /* Input lines from box 1 - start */
-.col .row {
+/* .col .row {
     margin-left: 0;
     margin-right: 0;
-}
+} */
 
 /* SCROLL BAR - start */
 .scroll2::-webkit-scrollbar {
@@ -433,6 +471,6 @@ footer {
 .scroll-box {
     overflow-y: scroll;
     height: 100px;
-    padding: 1rem
+    padding: 1rem;
 }
 /* SCROLL BAR - end */

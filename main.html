@@ -29,13 +29,13 @@
                     </a>
                     <ul class="right hide-on-med-and-down" id="navbar-links">
                         <li>
-                            <a href="#home" style="font-family: 'Roboto', sans-serif; font-size: 17px;"><i class="fas fa-home"></i></a>
+                            <a href="./main.html" style="font-family: 'Roboto', sans-serif; font-size: 17px;"><i class="fas fa-home"></i></a>
                         </li>
                         <li>
                             <a href="./404.html" style="font-family: 'Roboto', sans-serif; font-size: 17px;"><i class="fas fa-heart"></i></i></a>
                         </li>
                         <li>
-                            <a href="./login.html" style="font-family: 'Roboto', sans-serif; font-size: 17px;"><i class="fas fa-user"></i></a>
+                            <a href="./index.html" style="font-family: 'Roboto', sans-serif; font-size: 17px;"><i class="fas fa-user"></i></a>
                         </li>
                     </ul>
                 </div>
@@ -46,13 +46,13 @@
     <!-- Mobile Navbar -->
     <ul class="sidenav" id="mobile-nav">
         <li>
-            <a href="#home" style="font-family: 'Roboto', sans-serif; font-size: 17px;"><i class="fas fa-home"></i></a>
+            <a href="./main.html" style="font-family: 'Roboto', sans-serif; font-size: 17px;"><i class="fas fa-home"></i></a>
         </li>
         <li>
             <a href="./404.html" style="font-family: 'Roboto', sans-serif; font-size: 17px;"><i class="fas fa-heart"></i></i></a>
         </li>
         <li>
-            <a href="./login.html" style="font-family: 'Roboto', sans-serif; font-size: 17px;"><i class="fas fa-user"></i></a>
+            <a href="./index.html" style="font-family: 'Roboto', sans-serif; font-size: 17px;"><i class="fas fa-user"></i></a>
         </li>
     </ul>
 
@@ -62,28 +62,27 @@
             <div class="row">
                 <div class="col s12 m3" id="first-box">
                     <div class="card three-boxes scroll-box scroll2" style="background-color:rgba(0, 0, 0, 0.75);">
-                        <div class="new-ing-box ">
-                            <h5 class="center" id="enter-your-ingredients-header" style="color: white; font-family: 'Roboto', sans-serif;"><strong>Enter Your Ingredients:</strong></h5>
+                        <div class="new-ing-box">
+                            <h5 class="center" id="enter-your-ingredients-header" style="color: white; font-family: 'Roboto', sans-serif;"><strong>Add Your Ingredients:</strong></h5>
                             <div class="row">
                                 <div class="input-field col s12" id="user-ing-input">
                                     <!-- New Ingredient fields have an autocomplete function; -->
-                                    <input type="text" class="autocomplete" id="new-ingredient" placeholder="(Entry Required)" style="height: 2rem; font-size: 13px; color: white;">
+                                    <input type="text" class="autocomplete" id="new-ingredient" placeholder="(Entry Required)" required style="height: 2rem; font-size: 13px; color: white;">
                                 </div>    
                                 <div class="add-remove-submit center">
                                     <a class="waves-effect waves-light btn-small" id="add-ing-btn" style="font-size: 13px; color: black; font-weight: bold;">Add</a>
-                                    <a class="waves-effect waves-light btn-small" id="remove-ing-btn" style="font-size: 13px; color: black; font-weight: bold;">Remove</a>
-                                    <a class="waves-effect waves-light btn-small" id="submit-ing-btn" style="font-size: 13px; color: black; font-weight: bold;">Submit</a>
+                                    
                                 </div>
                             </div>
                         </div>
                         <div class="recent-ing-box">
-                            <h5 class="center" id="recent-ingredients-header" style="color: white; font-family: 'Roboto', sans-serif;"><strong>Recent Ingredients:</strong></h5>
+                            <h5 class="center" id="recent-ingredients-header" style="color: white; font-family: 'Roboto', sans-serif;"><strong>Find A Recipe:</strong></h5>
                             <div class="row" id="recent-ing-box">
-                                <div class="input-field col s12" id="recent-ing-list">
-                                    <input type="text" class="old-ingredient" placeholder="Chicken" style="height: 2rem; font-size: 13px; color: white;">
-                                    <input type="text" class="old-ingredient" placeholder="Peppers" style="height: 2rem; font-size: 13px; color: white;">
-                                    <input type="text" class="old-ingredient" placeholder="Beans" style="height: 2rem; font-size: 13px; color: white;">
-                                    <input type="text" class="old-ingredient" placeholder="Potatoes" style="height: 2rem; font-size: 13px; color: white;">
+                                <div class="input-field col s12" id="user-ing-list">
+                                </div>
+                                <div class="add-remove-submit center">
+                                    <a class="waves-effect waves-light btn-small" id="remove-ing-btn" style="font-size: 13px; color: black; font-weight: bold;">Remove</a>
+                                    <a class="waves-effect waves-light btn-small" id="submit-ing-btn" style="font-size: 13px; color: black; font-weight: bold;">Submit</a>
                                 </div>
                             </div>
                         </div>
@@ -92,27 +91,6 @@
                 <div class="col s12 m6" id="second-box">
                     <div class="card three-boxes scroll-box scroll2" id="recipe-loadins" style="background-color:rgba(0, 0, 0, 0.75);">
                         <h5 class="center" style="color: white; font-family: 'Roboto', sans-serif;" ><strong>List of Recipes:</strong></h5>
-                        <!-- <div class="row">
-                            <div class="col s12">
-                                <div class="card">
-                                    <div class="card-content" id="recipe-content">
-                                        <div class="recipe-title">
-                                            <h6 class="lable center" id="recipe-name"><strong></strong>
-                                                <i class="material-icons" id="fav-icon"></i>
-                                            </h6>
-                                        </div>                                        
-                                        <div class="recipe-text">
-                                            <p class="prep"></p>
-                                            <p class="diet"></p>
-                                            <p class="yield"></p>
-                                        </div>
-                                        <div>    
-                                            <img src="" id="recipe-image">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div> -->
                     </div>
                 </div>
                 <div class="col s12 m3" id="third-box">
@@ -120,19 +98,19 @@
                         <h5 class="center" style="color: white; font-family: 'Roboto', sans-serif;" ><strong>Information:</strong></h5>
                         <div class="row">
                             <div class="col s12" id="ingredient-list">
-                                <h6 class="white-text" id="recipe-ingredients" style="color: white; font-family: 'Roboto', sans-serif;"><strong>Recipe Ingredients:</strong></h6>
+                                <h6 class="white-text" id="recipe-ingredients" style="color: white; font-family: 'Roboto', sans-serif;">Recipe Ingredients:</h6>
                                 <p class="ingredientLines" style="color: white; font-family: 'Roboto', sans-serif;"></p>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col s12" id="recipe-url">
-                                <h6 class="white-text" id="url" style="color: white; font-family: 'Roboto', sans-serif;"><strong>Recipe Website:</strong></h6>                            
+                                <h6 class="white-text" id="url" style="color: white; font-family: 'Roboto', sans-serif;">Recipe Website:</h6>                            
                                 <a href="#" class="recipeURL" style="color: white; font-family: 'Roboto', sans-serif;"></a>
                             </div>
                         </div>    
                         <div class="row">
                             <div class="col s12">
-                                <h6 class="white-text" id="youtube-video" style="color: white; font-family: 'Roboto', sans-serif;"><strong>Need Help With This Recipe?</strong></h6>
+                                <h6 class="white-text" id="youtube-video" style="color: white; font-family: 'Roboto', sans-serif;">Need Help With This Recipe?</h6>
                                 <input type="text" name="search" id="search" placeholder="Find a Video for Guidance" style="height: 2rem; font-size: 13px; color: white;">
                                 <div class="youtube-buttons center">    
                                     <button type="button" class="tokenClass" value="Previous"><i class="material-icons lightgrey center">navigate_before</i></button>
