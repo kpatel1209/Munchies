@@ -1,4 +1,4 @@
-//YOUTUBE API KEY: AIzaSyDXCjOLfcNZySpuSsb6bWjYILdnuMZT7iA
+//YOUTUBE API KEY: AIzaSyAMTfT6p8u4Lr9Qyq5Dx1c78M1LTQPGqII
 //YOUTUBE CLIENT ID: 411034417194-jg7jqer63f99vcskief4fkk9aglmkq1t.apps.googleusercontent.com
 
 let pageToken = [];
@@ -43,7 +43,7 @@ function searchYoutube(){
         dataType: "JSON",
         type: "GET",
         data: {
-            key:"AIzaSyDXCjOLfcNZySpuSsb6bWjYILdnuMZT7iA",
+            key:"AIzaSyAMTfT6p8u4Lr9Qyq5Dx1c78M1LTQPGqII",
             q:$("#search").val(),
             part:"snippet",
             maxResults:10,
